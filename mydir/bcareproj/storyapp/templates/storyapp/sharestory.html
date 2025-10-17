@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block mycontent %}
+<link rel="stylesheet" href="{% static 'css/storyform.css' %}">
+
+<section class="notebook-form">
+  <div class="notebook-header">
+    <h2>Share Your Story</h2>
+    <p>Write your experience and inspire others. Leave name blank if you want to remain <b>Anonymous</b>.</p>
+  </div>
+
+  {% if story_submitted %}
+  <div class="success-box">
+    🎉 Your story has been submitted successfully! <br>
+    Our BuddyCare admin team will review it shortly. <br>
+    If approved, it will appear in the <b>User Story</b> tab within a few hours. 🐾<br>
+    <a href="{% url 'stories' %}" class="back-link">← Return to User Story Tab</a>
+  </div>
+  {% endif %}
+
+  <form method="POST">
+    {% csrf_token %}
+
+    <!-- Storyteller Name -->
+    <input type="text" name="storyteller" class="notebook-input" placeholder="Your name (or Anonymous)" required>
+    
+    <!-- Title -->
+    <input type="text" name="title" class="notebook-input" placeholder="Title of your story" required>
+    
+    <!-- Story Text -->
+    <textarea name="content" rows="12" class="notebook-textarea" placeholder="Write your story here..." required></textarea>
+    
+    <button type="submit" class="submit-btn">Publish Story</button>
+  </form>
+</section>
+{% endblock %}

@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block mycontent %}
+<link rel="stylesheet" href="{% static 'css/newowner.css' %}">
+
+<!-- Hero Section -->
+<section class="newowner-hero">
+  <!-- Left: Image -->
+  <div class="hero-image">
+    <img src="{% static 'images/petowner1.webp' %}" alt="Happy pet with owner">
+  </div>
+
+  <!-- Right: Text -->
+  <div class="hero-text">
+    <h1>Welcome, First-Time Pet Parents 🐾</h1>
+    <p>Taking care of a new pet can feel overwhelming — 
+    but don’t worry. Here’s your simple guide to ensure your furry friend grows up safe, healthy, and loved.</p>
+  </div>
+</section>
+
+<!-- Guidance Content -->
+<section class="newowner-guide">
+  <div class="guide-container">
+    <h2>First-Time Pet Owner Guidance</h2>
+    <p class="intro">
+      Becoming a pet parent for the very first time is exciting, a little scary, but mostly full of love. 
+      Don’t worry — BuddyCare is here to walk with you step by step. Let’s make this journey fun for both you and your furry friend. 
+    </p>
+
+    <div class="guide-content">
+      <h3>1. Get Your Home Ready</h3>
+      <p>
+        Think of it as welcoming a baby — pets need a safe, cozy spot too.  
+        Clear away wires, chemicals, or sharp things they might chew.  
+        Keep fresh water, food bowls, and a soft place(bed,mat,crate) ready before they arrive. 
+        Trust us, your pet will feel at home faster!
+      </p>
+
+      <h3>2. Food & Treats </h3>
+      <p>
+        Every pet’s tummy is different! Puppies, kittens, or adult pets need the right diet.  
+        Avoid chocolates, grapes, or spicy food (they can harm your buddy).  
+        Stick to safe pet food, and remember: a few healthy treats = happy wagging tail!
+      </p>
+
+      <h3>3. First Vet Visit</h3>
+      <p>
+        Just like kids need doctors, pets need their vet.  
+        Take your buddy for a checkup within the first week. Vaccines, deworming, and health advice now will save you from bigger worries later.
+      </p>
+
+      <h3>4. Play, Walk, Repeat</h3>
+      <p>
+        Pets are bundles of energy! Daily walks, games like fetch, or even indoor toy time keep them fit and cheerful.  
+        A tired pet = a happy pet .
+      </p>
+
+      <h3>5. Grooming is Caring </h3>
+      <p>
+        Bathing, brushing, nail trimming — it’s not just about looks.  
+        Grooming keeps your pet healthy, reduces shedding, and makes cuddle-time more fun.  
+        Plus, they secretly enjoy the pampering.
+      </p>
+
+      <h3>6. Teach & Bond</h3>
+      <p>
+        Start small — “sit,” “stay,” or “come.”  
+        Use treats and lots of praise. Training isn’t only about discipline; it’s about building trust and friendship.  
+        Your pet will see you not just as an owner, but as their best friend. 
+      </p>
+
+      <h3>7. Love, Patience & Understanding</h3>
+      <p>
+        Every pet is unique. Some learn fast, some take time.  
+        There will be accidents, chewed shoes, and late-night barking.  
+        But remember — patience, kindness, and love are the real keys to being the best pet parent.  
+        And in return, you’ll get unconditional love like never before.
+      </p>
+
+      <!-- Adopt CTA -->
+      <div class="adopt-cta">
+        <p>Ready to bring happiness home?</p>
+        <a href="{% url 'adopt_page' %}" class="cta-btn">Adopt a Pet</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

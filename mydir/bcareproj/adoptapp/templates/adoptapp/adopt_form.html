@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block mycontent %}
+<link rel="stylesheet" href="{% static 'css/adopt_form.css' %}">
+
+<div class="adopt-form-container">
+    <h2>Adopt a Pet 😃</h2>
+    <p>Fill out the form to start the adoption process.</p>
+
+    <form method="POST">
+        {% csrf_token %}
+        
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="pet">Pet Name:</label>
+        <input type="text" id="pet" name="pet" value="{{ pet_name }}" readonly>
+
+        <label for="reason">Why do you want to adopt?</label>
+        <textarea id="reason" name="reason" rows="4" required></textarea>
+
+        <button type="submit" class="btn-adopt-submit">Submit Application</button>
+    </form>
+</div>
+{% endblock %}

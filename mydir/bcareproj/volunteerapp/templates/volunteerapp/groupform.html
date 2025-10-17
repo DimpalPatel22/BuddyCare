@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block mycontent %}
+
+<link rel="stylesheet" href="{% static 'css/groupform.css' %}">
+
+<section class="join-group-section">
+  <div class="form-container">
+    <h2>Join a Volunteer Group</h2>
+    <p>Fill out the form below and our team will connect you with the right volunteer group.</p>
+
+    {% if submitted %}
+      <div class="messages">
+        <p class="msg">Thank you {{ name }}, we will connect you with the {{ group|cut:"_"|title }}! BuddyCare team tell the place and time via Contact</p>
+        <a href="{% url 'volunteer' %}" class="back-link">← Return to Volunteers Page</a>
+      </div>
+    {% endif %}
+
+    <form method="POST" action="{% url 'groupform' %}" class="group-form">
+      {% csrf_token %}
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+      <label for="contact">Contact Number</label>
+      <input type="tel" id="contact" name="contact" placeholder="Enter phone number" required>
+
+      <label for="group">Select Group</label>
+      <select id="group" name="group" required>
+        <option value="">-- Choose a group --</option>
+        <option value="street_feeding">Street Feeding Crew</option>
+        <option value="bird_rescue">Bird Rescue Team</option>
+        <option value="adoption_support">Adoption Support Squad</option>
+      </select>
+
+      <button type="submit" class="submit-btn">Join Now</button>
+    </form>
+  </div>
+</section>
+
+{% endblock %}

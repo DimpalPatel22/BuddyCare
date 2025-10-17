@@ -1,0 +1,164 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block mycontent %}
+<link rel="stylesheet" href="{% static 'css/dangerous.css' %}">
+
+<!-- Hero Section -->
+<section class="danger-hero">
+  <div class="danger-inner">
+    <h1>Dangerous Animal Help – Stay Safe, Save Lives </h1>
+    <p>Guidelines to handle aggressive or dangerous animals calmly — at home, office, or outdoors.</p>
+  </div>
+</section>
+
+<!-- Common Dangerous Situations -->
+<section class="danger-situations">
+  <h2>⚠ Common Dangerous Situations</h2>
+  <div class="situation-cards">
+
+    <div class="situation-card">
+      <span class="icon">🐕‍🦺</span>
+      <h3>Aggressive Dogs</h3>
+      <p>Stay calm, avoid direct eye contact, and back away slowly. Do not run or shout.</p>
+    </div>
+
+    <div class="situation-card">
+      <span class="icon">🐍</span>
+      <h3>Snake Encounters</h3>
+      <p>Maintain distance, do not attempt to kill. Call a snake rescuer immediately.</p>
+    </div>
+
+    <div class="situation-card">
+      <span class="icon">🐒</span>
+      <h3>Monkey Trouble</h3>
+      <p>Do not make eye contact or offer food. Secure doors and windows calmly.</p>
+    </div>
+
+    <div class="situation-card">
+      <span class="icon">🐂</span>
+      <h3>Aggressive Cattle</h3>
+      <p>Keep safe distance, avoid provoking, and alert local authorities if needed.</p>
+    </div>
+
+    <div class="situation-card">
+      <span class="icon">🦅</span>
+      <h3>Birds of Prey</h3>
+      <p>If trapped inside, switch off fans and open windows. Let them fly out naturally.</p>
+    </div>
+
+    <div class="situation-card">
+        <span class="icon">🐀</span>
+        <h3>Rats & Rodents</h3>
+        <p>Common in cities during monsoon and garbage areas. Avoid direct contact, never corner them, and keep surroundings clean.</p>
+    </div>
+</div>
+</section>
+
+<!-- When They Enter Your Living Space -->
+<section class="living-space">
+    <h2>When They Enter Your Living Space</h2>
+    <p class="intro">
+        Sometimes animals or birds accidentally enter our homes. Stay calm and follow these steps to ensure safety for both you and them.
+    </p>
+    <div class="living-steps">
+        <div class="step">
+            <h3>Stay Calm & Isolate the Area</h3>
+            <p>Close doors to other rooms, keep children and pets away, and create a quiet space.</p>
+        </div>
+        <div class="step">
+            <h3>Give an Exit Path</h3>
+            <p>Open windows or balconies to let them leave naturally without stress.</p>
+        </div>
+        <div class="step">
+            <h3>Turn Off Fans & Bright Lights</h3>
+            <p>Helps birds or small creatures calm down and avoid injury.</p>
+        </div>
+
+        <div class="step">
+            <h3>Call Local Rescue</h3>
+            <p>If it’s a snake, monkey, or dangerous animal, immediately contact rescuers or authorities.</p>
+        </div>
+    </div>
+    <!-- Example Situations -->
+    <div class="living-examples">
+        <h3>🔎 Examples of Common Situations</h3>
+        <div class="example">
+            <div class="example-header">
+                <img src="{% static 'images/eagle.jpg' %}" alt="Eagle" class="example-img">
+                <h4>If an Eagle Enters</h4>
+            </div>
+            <p>Turn off ceiling fans, dim the lights, and open all windows or balconies. Stay away and let it fly out naturally.</p>
+        </div>
+        <div class="example">
+            <div class="example-header">
+                <img src="{% static 'images/snake.jpg' %}" alt="Snake" class="example-img">
+                <h4>If a Snake Enters</h4>
+            </div>
+            <p>Do not try to handle or kill it. Keep a safe distance, close the room, and immediately call a certified snake rescuer.</p>
+        </div>
+        <div class="example">
+            <div class="example-header">
+                <img src="{% static 'images/monkey.jpg' %}" alt="Monkey" class="example-img">
+                <h4>If a Monkey Enters</h4>
+            </div>
+            <p>Do not make eye contact, avoid offering food, and calmly secure all exits. Call forest officials if the monkey doesn’t leave.</p>
+        </div> 
+        <div class="example">
+            <div class="example-header">
+                <img src="{% static 'images/straydog.jpg' %}" alt="Dog" class="example-img">
+                <h4>If a Stray Dog Enters</h4>
+            </div>
+            <p>Stay calm, open the exit door, and gently guide them out without shouting.
+                also you can give them some living place  
+                If aggressive, wait for help from local rescuers.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Mini Do's & Don'ts -->
+<section class="mini-dos-donts">
+    <h3>Quick Do’s & Don’ts</h3>
+    <div class="dos-donts-container">
+        <div class="dos">
+            <h4>✅ Do’s</h4>
+            <ul>
+                <li>Observe from a safe distance before taking action.</li>
+                <li>Keep emergency numbers handy.</li>
+                <li>Ensure pets are in a separate safe area.</li>
+                <li>Document the situation (photo/video) for rescuers if safe.</li>
+            </ul>
+        </div>
+        <div class="donts">
+            <h4>❌ Don’ts</h4>
+                <ul>
+                    <li>Do not attempt DIY traps for dangerous animals.</li>
+                    <li>Do not panic or create noise that may agitate them.</li>
+                    <li>Do not block exits — always let them leave freely.</li>
+                    <li>Do not leave food or waste nearby that attracts them.</li>
+                </ul>
+            </div>
+        </div>
+</section>
+
+<!-- Emergency Contacts as Numbered List -->
+<section class="emergency-contacts">
+    <h3>Emergency Contacts</h3>
+    <p>In case of dangerous animal encounters, contact immediately:</p>
+    
+    <ol class="contact-note">
+        <li>Snake / Animal Rescue :- +91 98765 43210</li>
+        <li>Forest / Monkey Helpline :- +91 87654 32109</li>
+        <li>Local NGO Animal Rescue :- +91 91234 56789</li>
+        <li>Bird Rescue :- +91 99887 66554</li>
+        <li>City Police Control Room :- 100</li>
+    </ol>
+</section>
+
+<!-- Awareness Tips -->
+<section class="awareness-tips">
+  <p><strong>Remember:</strong> Most animals and birds don’t intend to harm humans. They are scared, lost, or protecting themselves. Calm handling, patience, and timely help keep both you and them safe.</p>
+  <p class="quote">“The best way to show compassion is in how we treat those without a voice.” – Unknown</p>
+</section>
+
+{% endblock %}

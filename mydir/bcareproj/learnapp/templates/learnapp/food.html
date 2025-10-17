@@ -1,0 +1,200 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block mycontent %}
+<link rel="stylesheet" href="{% static 'css/food.css' %}">
+
+<!-- Hero Section -->
+<section class="food-hero">
+  <div class="hero-inner">
+    <h1>Feeding & Nutrition</h1>
+    <p>Learn what, when, and how to feed your pets and street animals safely.</p>
+  </div>
+</section>
+
+<!-- Do's & Don'ts Section -->
+<section class="food-tips">
+  <h2>Do's & Don'ts for Pet Nutrition</h2>
+  <div class="tips-container">
+
+    <!-- Do's Box -->
+    <div class="tip-box do-box">
+      <h3>Do ✅</h3>
+      
+      <div class="topic">
+        <h4>Hydration</h4>
+        <ul>
+          <li>Feed fresh water daily.</li>
+          <li>Check water bowls are clean and filled.</li>
+        </ul>
+      </div>
+
+      <div class="topic">
+        <h4>Balanced Diet</h4>
+        <ul>
+          <li>Include proteins, fats, and carbs in proper ratio.</li>
+          <li>Offer seasonal fruits and vegetables.</li>
+        </ul>
+      </div>
+
+      <div class="topic">
+        <h4>Hygiene</h4>
+        <ul>
+          <li>Use clean bowls and utensils.</li>
+          <li>Keep feeding area sanitary.</li>
+        </ul>
+      </div>
+
+      <div class="topic">
+        <h4>Regular Monitoring</h4>
+        <ul>
+          <li>Check pet’s body weight and condition regularly.</li>
+          <li>Observe eating habits and adjust diet if necessary.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Don't Box -->
+    <div class="tip-box dont-box">
+      <h3>Don't ❌</h3>
+      
+      <div class="topic">
+        <h4>Unsafe Foods</h4>
+        <ul>
+          <li>Avoid chocolate, caffeine, alcohol.</li>
+          <li>No spoiled or moldy food.</li>
+        </ul>
+      </div>
+
+      <div class="topic">
+        <h4>Overfeeding</h4>
+        <ul>
+          <li>Do not overfeed or free-feed constantly.</li>
+          <li>Avoid excessive human food.</li>
+        </ul>
+      </div>
+
+      <div class="topic">
+        <h4>Dangerous Items</h4>
+        <ul>
+          <li>Never give bones that can splinter.</li>
+          <li>Follow vet-recommended supplements only.</li>
+        </ul>
+      </div>
+      <div class="topic">
+        <h4>Neglect</h4>
+        <ul>
+          <li>Do not ignore signs of illness or poor appetite.</li>
+          <li>Never leave pets without supervision for long periods during feeding.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Feeding Schedule Section -->
+<section class="feeding-schedule">
+  <h2>Feeding Schedule for Animals & Birds 🐾</h2>
+  <div class="schedule-container">
+
+    <div class="schedule-card">
+      <h3><img src="{% static 'images/food1.png' %}" class="icons">Puppies / Kittens</h3>
+      <p>Small meals, 4–5 times/day. Ensure fresh water is always available.</p>
+    </div>
+
+    <div class="schedule-card">
+      <h3><img src="{% static 'images/food2.png' %}" class="icons">Adult Dogs / Cats</h3>
+      <p>2 meals/day, plus clean water always.</p>
+    </div>
+
+    <div class="schedule-card">
+      <h3><img src="{% static 'images/food3.png' %}" class="icons">Birds</h3>
+      <p>Grains + fresh water, morning and evening.</p>
+    </div>
+
+    <div class="schedule-card">
+      <h3><img src="{% static 'images/food4.jpg' %}" class="icons">Street Animals</h3>
+      <p>Best times to feed: early morning or night when roads are calm.</p>
+    </div>
+
+    <div class="schedule-card">
+      <h3><img src="{% static 'images/food5.png' %}" class="icons">Small Calf / Cow</h3>
+      <p>Feed milk or milk replacer for calves, small frequent meals; cows need fresh fodder + water 2–3 times/day.</p>
+    </div>
+    
+    <div class="schedule-card">
+      <h3><img src="{% static 'images/food6.png' %}" class="icons">Goat / Sheep</h3>
+      <p>Provide clean hay, grains, and fresh water twice a day. Monitor grazing if outside.</p>
+    </div>
+
+    <div class="schedule-card">
+      <h3><img src="{% static 'images/food7.png' %}" class="icons">Rescue Pet</h3>
+      <p>Start with small, frequent meals; soft, easy-to-digest food; monitor for stress or illness.</p>
+    </div>
+
+    <div class="schedule-card">
+      <h3><img src="{% static 'images/food8.png' %}" class="icons">Adopted Pet</h3>
+      <p>Follow vet guidance for diet, introduce new food gradually, and ensure clean water is available at all times.</p>
+    </div>
+  </div>
+</section>
+
+<section class="quick-recipes">
+  <h2>Quick Recipes & Tips</h2>
+  <p>Easy homemade food ideas for pets, street animals, and birds.</p>
+
+  <div class="recipes-stack">
+    <!-- Recipe 1 -->
+    <div class="recipe-card">
+      <img src="{% static 'images/recipe1.jpg' %}" alt="Rice + Chicken" class="recipe-icon">
+      <h3>Rice + Boiled Chicken</h3>
+      <p>Healthy meal for dogs. Boil chicken, mix with rice, and serve warm.</p>
+    </div>
+
+    <!-- Recipe 2 -->
+    <div class="recipe-card">
+      <img src="{% static 'images/recipe2.jpg' %}" alt="Curd Rice" class="recipe-icon">
+      <h3>Curd Rice</h3>
+      <p>Great for summer. Keeps dogs hydrated and cool.</p>
+    </div>
+
+    <!-- Recipe 3 -->
+    <div class="recipe-card">
+      <img src="{% static 'images/recipe3.jpg' %}" alt="Soaked Grains" class="recipe-icon">
+      <h3>Soaked Grains</h3>
+      <p>Perfect for pigeons and birds. Soak grains overnight for easy digestion.</p>
+    </div>
+
+    <!-- Recipe 4 -->
+    <div class="recipe-card">
+      <img src="{% static 'images/recipe4.jpg' %}" alt="Roti + Milk" class="recipe-icon">
+      <h3>Roti + Milk Alternatives</h3>
+      <p>Ideal for street dogs. Avoid spicy curries or oily foods.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Awareness Strip Section -->
+<section class="awareness-strip">
+  <div class="awareness-header">
+    <h2>⚠️ Quick Awareness Tips</h2>
+    <p>Simple tips to ensure safe and healthy feeding for pets and street animals.</p>
+  </div>
+
+  <div class="awareness-container">
+    <div class="awareness-box">Avoid feeding stray dogs biscuits with too much sugar. Better: chapati + milk or rice.</div>
+    <div class="awareness-box">Observe pets for illness or poor appetite; report or visit vet if needed..</div>
+    <div class="awareness-box">If an animal is injured while feeding, alert volunteers or vet immediately</div>
+    <div class="awareness-box">Never use human spices or leftovers with heavy salt on pet food</div>
+    <div class="awareness-box">Puppies can’t digest cow’s milk — always give puppy formula or vet-approved milk replacer.</div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="food-cta">
+  <p>Got a useful Nutrition or Feeding tip to share?</p>
+  <a href="{% url 'learn' %}?#sharetips" class="cta-btn">Share Your Tip</a>
+</section>
+
+{% endblock %}

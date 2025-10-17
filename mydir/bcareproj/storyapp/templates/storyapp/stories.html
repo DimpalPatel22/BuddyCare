@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block mycontent %}
+<link rel="stylesheet" href="{% static 'css/story.css' %}">
+<link rel="stylesheet" href="{% static 'css/tabstories.css' %}">
+
+<!--1st Part:- Hero section-->
+<section class="stories-hero">
+  <div class="stories-heading">
+    <h1>Stories that Inspire, Heal & Connect</h1>
+    <p class="subheading">Read real journeys of rescue, love, and kindness from our community.</p>
+  </div>
+</section>
+
+<div class="share-story-container">
+  <p class="share-story-text">
+    Have a touching experience or heartwarming moment with an animal or bird? 
+    Share your story with our community and inspire others! You can choose to remain anonymous if you like.
+  </p>
+  <a href="{% url 'sharestory' %}">
+    <button class="share-story-btn">Share Your Story</button>
+  </a>
+</div>
+
+<!--2nd part:Tab-->
+<section class="stories-tabs-container">
+  <div class="tabs-wrapper">
+    <div class="tabs-highlight"></div>
+    <button class="tab active" data-index="0">General</button>
+    <button class="tab" data-index="1">Real Life</button>
+    <button class="tab" data-index="2">Success</button>
+    <button class="tab" data-index="3">Volunteer</button>
+    <button class="tab" data-index="4">Userstory</button>
+  </div>
+
+  <div class="tab-content">
+    <div class="content active">
+        {% include 'storyapp/generalstories.html' %}
+    </div>
+
+    <div class="content">
+      {% include 'storyapp/reallifestories.html' %}
+    </div>
+
+    <div class="content">
+      {% include 'storyapp/successstories.html' %}
+    </div>
+
+    <div class="content">
+      {% include 'storyapp/volunteerstories.html' %}
+    </div>
+    <div class="content">
+      {% include 'storyapp/userstories.html' %}
+    </div>
+  </div>
+</section>
+
+<script src="{% static 'js/story.js' %}"></script>
+{% endblock %}

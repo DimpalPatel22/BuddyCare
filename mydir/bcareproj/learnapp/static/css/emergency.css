@@ -1,0 +1,206 @@
+/* Hero Section */
+.emergency-hero {
+  background: url('/static/images/d1.jpg') no-repeat center center/cover;
+  padding: 120px 50px;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+.emergency-hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right:0; bottom:0;
+  background: rgba(0,0,0,0.45); /* dark overlay for contrast */
+}
+.emergency-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+  animation: fadeInDown 1s ease forwards;
+}
+.emergency-hero p {
+  font-size: 1.3rem;
+  position: relative;
+  z-index: 1;
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* Animations */
+@keyframes fadeInDown { from { opacity:0; transform: translateY(-30px);} to {opacity:1; transform: translateY(0);} }
+@keyframes fadeInUp { from { opacity:0; transform: translateY(30px);} to {opacity:1; transform: translateY(0);} }
+
+/* Guide Section */
+.emergency-guide {
+  padding: 50px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+.emergency-guide h2 {
+  margin-bottom: 25px;
+  color: #27ae60;
+}
+.steps-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+.step-card {
+  background: linear-gradient(145deg, #ffffff, #e0f7fa);
+  border-left: 6px solid #27ae60;
+  padding: 25px 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  flex: 1 1 250px;
+  transition: transform 0.3s, box-shadow 0.3s, border-left 0.3s;
+}
+.step-card:hover {
+  transform: translateY(-6px) scale(1);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+  border-left: 6px solid #ff4d4d;
+}
+.step-card h3 {
+  color: #ff5722;
+  margin-bottom: 12px;
+}
+.step-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Emergency Contacts - now moved after steps */
+.emergency-contacts {
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #ff4d4d, #ff9999);
+  color: white;
+  margin-top: 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  text-align: left;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.emergency-contacts h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #fff;
+  text-align: center;
+}
+
+.emergency-contacts li {
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+.emergency-contacts .note {
+  font-size: 0.9rem;
+  color: #ffe0b2;
+  margin-top: 10px;
+}
+
+/* Emergency Scenarios Section */
+.emergency-scenarios {
+  padding: 50px 20px;
+  text-align: center;
+}
+.emergency-scenarios h2 {
+  margin-bottom: 30px;
+  color: #27ae60;
+}
+.scenario-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 25px;
+}
+.scenario-card {
+  background: linear-gradient(145deg, #fffde7, #fff9c4);
+  border-left: 6px solid #fbc02d;
+  padding: 25px 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+  flex: 1 1 220px;
+  transition: transform 0.3s, box-shadow 0.3s, border-left 0.3s;
+}
+.scenario-card:hover {
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+  border-left: 6px solid #ff9800;
+}
+.scenario-card h3 {
+  color: #f57c00;
+  margin-bottom: 10px;
+}
+
+/* Emergency Info Section - Two Boxes */
+.emergency-info {
+  padding: 30px 10px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.info-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.info-box {
+  flex: 1 1 300px;
+  background: white;
+  padding: 30px 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.info-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.info-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #27ae60;
+  font-size: 1.6rem;
+}
+
+.info-box ul {
+  list-style: disc inside;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.first-aid-box {
+  border-top: 6px solid #388e3c; /* green accent */
+}
+
+.awareness-box {
+  border-top: 6px solid #e74c3c; /* red accent */
+}
+
+/* CTA Section */
+.cta {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(to right, #1b1b1b, #333);
+  color: white;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+.cta-btn {
+  background: linear-gradient(45deg, #ff9800, #ff5722);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+}

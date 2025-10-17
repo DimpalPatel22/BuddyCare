@@ -1,0 +1,491 @@
+/* Volunteer Hero Section */
+.volunteer-hero {
+  padding: 10px 0;  
+  background: linear-gradient(135deg, rgba(39,174,96,0.05), rgba(0,0,0,0.02));
+}
+
+.hero-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px;  
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h1 {
+  font-size: 32px; 
+  font-weight: 700;
+  color: #1f4b36;
+  margin-bottom: 2px;
+  line-height: 1.2;
+}
+
+.subheading {
+  font-size: 17px;
+  font-weight: 500;
+  color: #2f5946;
+  margin-bottom: 10px;
+}
+
+.intro-line {
+  font-size: 15px;
+  color: #4a5d50;
+  line-height: 1.4;
+  max-width: 480px;
+}
+
+/* Hero Image */
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 360px;  /* smaller image so text feels closer */
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  object-fit: cover;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+}
+/* Intro Section */
+.volunteer-intro {
+  padding: 30px 10px;
+  text-align: center;
+  background: #d5ddd5; /* soft light background */
+}
+
+.intro-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.intro-box {
+  background: #ffffff;
+  padding: 28px 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.intro-box h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1f4b36;
+  margin-bottom: 14px;
+}
+
+.motivation-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #44594a;
+  margin: 0;
+}
+
+/* Volunteer Roles Section */
+.volunteer-roles {
+  padding: 10px 20px;
+  background: #f8fbf9;
+}
+
+.roles-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.volunteer-roles h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1f4b36;
+  margin-bottom: 15px;
+}
+
+.roles-text {
+  font-size: 16px;
+  color: #44594a;
+  margin-bottom: 40px;
+}
+
+.roles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 21px;
+}
+
+.role-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 10px 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.role-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+}
+
+.role-card img {
+  width: 150px;
+  margin-bottom: 15px;
+}
+
+.role-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f4b36;
+  margin-bottom: 10px;
+}
+
+.role-card p {
+  font-size: 14px;
+  color: #44594a;
+  line-height: 1.5;
+}
+/* Volunteer List Section */
+.volunteer-list {
+  padding: 50px 20px;
+  background: #f2f8f5; /* soft light background */
+  text-align: center;
+}
+
+.list-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.volunteer-list h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1f4b36;
+  margin-bottom: 10px;
+}
+
+.list-intro {
+  font-size: 16px;
+  color: #44594a;
+  margin-bottom: 35px;
+}
+
+/* Grid */
+.volunteer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 22px;
+}
+
+/* Volunteer Card */
+.volunteer-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #ffffff; /* clean card */
+  padding: 16px 18px;
+  border-left: 5px solid #27ae60; /* accent line for uniqueness */
+  border-radius: 12px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.volunteer-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+/* Card header */
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.avatar img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.volunteer-type {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f4b36;
+}
+
+/* Details below */
+.volunteer-details {
+  margin-left: 57px; /* aligns under type, not avatar */
+}
+
+.volunteer-details p {
+    margin: 3px 0;
+    font-size: 14px;
+    color: #3b5342;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.volunteer-name {
+  font-weight: 600;
+}
+
+.volunteer-contact {
+  font-weight: 400;
+  color: #2f5946;
+}
+
+.volunteer-experience,
+.volunteer-location {
+  font-weight: 400;
+}
+/* group section */
+.team-icon {
+  width: 80px; /* adjust size as needed */
+  height: 70px;
+  object-fit: contain;
+}
+.groups-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centers heading with image */
+  gap: 10px; /* space between icon and text */
+  font-size: 28px;
+  font-weight: 700;
+  color: #1f4b36;
+  margin-bottom: 10px;
+}
+
+.groups-container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 0 15px;
+}
+
+/* Each Group Flow */
+.group-flow {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #f0faf5; /* light greenish background */
+  padding: 15px 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.group-flow:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+/* Group Icon */
+.group-icon img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+/* Group Info */
+.group-info h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f4b36;
+  margin-bottom: 6px;
+}
+
+.group-info p {
+  font-size: 14px;
+  color: #3b5342;
+  margin: 3px 0;
+  line-height: 1.4;
+}
+
+/* Join Button */
+.join-btn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 6px 14px;
+  background: #27ae60;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+/* CTA Section */
+.volunteer-cta {
+  background: #1b1b1bfa;
+  padding: 50px 20px;
+  border-radius: 10px;
+  margin: 40px auto;
+}
+
+.cta-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Left Side: Text */
+.cta-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.cta-text h2 {
+  font-size: 1.8rem;
+  color: whitesmoke;
+  margin-bottom: 15px;
+}
+
+.cta-guide {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: wheat;
+  line-height: 1.6;
+}
+
+.criteria-list {
+  padding: 0;
+  margin: 0;
+}
+
+.criteria-list li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: white;
+}
+
+/* Right Side: Button */
+.cta-action {
+  text-align: center;
+  flex: 0 0 auto;
+}
+
+.cta-btn {
+  display: inline-block;
+  background-color: #ff9800; 
+  color: #fff;
+  padding: 20px 25px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.cta-btn:hover {
+  background-color: #e68900;
+  transform: translateY(-2px);
+}
+/* FAQ Section */
+.faq-heading {
+  font-size: 1.5rem;
+  color: #1f4b36;
+  display: flex;
+  align-items: center;   /* vertically center icon + text */
+  gap: 12px;             /* space between icon and text */
+  margin-bottom: 12px;
+}
+
+.faq-icon {
+  width: 90px;
+  height: 90px;
+}
+
+.volunteer-faq {
+  background: #f9f9f9;
+  padding: 50px 20px;
+  border-radius: 10px;
+  margin: 40px auto;
+  max-width: 900px;
+}
+
+.volunteer-faq h2 {
+  text-align: center;
+  color: #1f4b36;
+  margin-bottom: 10px;
+}
+
+.faq-intro {
+  text-align: left;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.faq-item {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 12px;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question span {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.faq-answer {
+  display: none;
+  padding: 10px 12px 12px;
+  font-size: 0.99rem;
+  color: #444;
+  line-height: 1.5;
+  border-radius: 10%;
+}
+/*last part*/
+.volunteer-stories-cta {
+  background-color: #8ab19a;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 24px;
+}
+
+.volunteer-stories-cta h2 {
+  margin-bottom: 10px;
+}
+
+.volunteer-stories-cta p {
+  margin-bottom: 15px;
+}
+
+.volunteer-stories-cta .stories-btn {
+  padding: 10px 25px;
+  color: #27ae60;
+  background-color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+}

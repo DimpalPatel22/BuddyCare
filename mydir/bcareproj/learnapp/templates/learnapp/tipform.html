@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block mycontent %}
+<link rel="stylesheet" href="{% static 'css/tipform.css' %}">
+
+<section class="share-tips-hero">
+  <div class="hero-inner">
+    <h1>Share Your Tips with BuddyCare</h1>
+    <p>Your knowledge can help other pet owners and save many lives!</p>
+  </div>
+</section>
+
+<!-- Form Section -->
+<section class="share-tips-form">
+  <form method="POST" action="">
+    {% csrf_token %}
+    {% if submitted %}
+    <div class="success-box">
+        🎉 Thank you, {{ username }}! <br>
+        Your tip under <b>{{ tip_type }}</b> has been submitted successfully. 🐾
+    </div>
+    <div class="go-learn-btn">
+        <a href="{% url 'learn' %}" class="cta-btn">Go to Help/Learn Page</a>
+    </div>
+    {% endif %}
+    <!-- User Name -->
+    <div class="form-group">
+      <label for="username">Your Name:</label>
+      <input type="text" id="username" name="username" placeholder="Enter your name" required>
+    </div>
+
+    <!-- Extra field (optional) -->
+    <div class="form-group">
+      <label for="email">Your Email (optional):</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email">
+    </div>
+
+    <!-- Dropdown: Tip Category -->
+    <div class="form-group">
+      <label for="tip_type">What type of tip do you want to share?</label>
+      <select id="tip_type" name="tip_type" required>
+        <option value="">-- Select --</option>
+        <option value="food">Food & Nutrition</option>
+        <option value="remedies">Remedies</option>
+        <option value="disease">Disease & Health Awareness</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+
+    <!-- Hidden field: Only visible if "Other" is selected -->
+    <div class="form-group" id="other-box" style="display: none;">
+      <label for="other_text">Please specify:</label>
+      <input type="text" id="other_text" name="other_text" placeholder="Enter your custom category">
+    </div>
+
+    <!-- Textarea: User Tip -->
+    <div class="form-group">
+      <label for="tip_text">Write your tip:</label>
+      <textarea id="tip_text" name="tip_text" rows="6" placeholder="Share your tip here..." required></textarea>
+    </div>
+
+    <button type="submit" class="cta-btn">Submit Tip</button>
+  </form>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const tipType = document.getElementById("tip_type");
+    const otherBox = document.getElementById("other-box");
+
+    tipType.addEventListener("change", function () {
+      if (this.value === "other") {
+        otherBox.style.display = "block";
+      } else {
+        otherBox.style.display = "none";
+      }
+    });
+  });
+</script>
+
+{% endblock %}

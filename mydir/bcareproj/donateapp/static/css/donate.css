@@ -1,0 +1,210 @@
+/* 🌟 Donation Page Layout */
+.donation-section {
+    padding: 40px 20px;
+    margin: 40px 0;
+    background: #fffdfd;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.donation-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* LHS - Info */
+.donation-info {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    background: #fff8f5;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.donation-info h2, 
+.donation-info h3 {
+    color: #e91e63;
+    margin-bottom: 15px;
+}
+
+.donation-info ol {
+    margin-left: 20px;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.donation-info ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.impact-quote {
+    font-style: italic;
+    color: #c2185b;
+    font-weight: 600;
+    border-left: 4px solid #e91e63;
+    padding-left: 10px;
+}
+
+/* RHS - Donation Form */
+.donation-form-wrapper {
+    flex: 1;
+    min-width: 320px;
+    max-width: 450px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    text-align: left;
+}
+
+.donation-form-wrapper h2 {
+    color: #e91e63;
+    margin-bottom: 10px;
+}
+
+.form-subtext {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.donation-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.donation-form label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.donation-form input,
+.donation-form select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 0.95rem;
+}
+
+.donate-btn {
+    background: #e91e63;
+    color: #fff;
+    font-weight: 600;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.donate-btn:hover {
+    background: #d81b60;
+}
+/* Mini button style for offline donation link */
+.back-home {
+    display: inline-block;
+    background: #bcb0b4;
+    color: #171515;
+    padding: 8px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+
+    transition: background 0.3s, transform 0.2s;
+}
+
+.back-home:hover {
+    background: #655f61;
+    transform: translateY(-2px);
+}
+/* Offline Donation Section */
+.donation-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Instructions - LHS */
+.offline-instructions {
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+    background: #f0f4f8;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.offline-instructions h2 {
+    color: #1976d2;
+    margin-bottom: 15px;
+}
+
+.offline-instructions ol {
+    margin-left: 20px;
+    color: #333;
+}
+
+.impact-quote {
+    font-style: italic;
+    color: #1976d2;
+    margin-top: 15px;
+}
+
+/* Form - RHS */
+.offline-form {
+    flex: 1;
+    min-width: 300px;
+    max-width: 450px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+}
+
+.offline-form h2 {
+    color: #1976d2;
+    margin-bottom: 15px;
+}
+
+.donation-form input,
+.donation-form select,
+.donation-form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 0.95rem;
+}
+
+.donate-btn {
+    background: #1976d2;
+    color: #fff;
+    font-weight: 600;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.donate-btn:hover {
+    background: #115293;
+}
+.location-icon {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    margin-left: 2px;
+}

@@ -1,0 +1,93 @@
+/* Join Group Form Page */
+.join-group-section {
+    padding: 50px 20px;
+    background: #f2f8f5; /* soft background */
+    display: flex;
+    justify-content: center;
+}
+
+.form-container {
+    background: #ffffff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    max-width: 450px;
+    width: 100%;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.form-container h2 {
+    font-size: 26px;
+    color: #1f4b36;
+    margin-bottom: 10px;
+}
+
+.form-container p {
+    font-size: 14px;
+    color: #3b5342;
+    margin-bottom: 25px;
+}
+
+.form-container label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #2f5946;
+}
+
+.form-container input,
+.form-container select {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 18px;
+    border: 1.5px solid #27ae60;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #3b5342;
+    outline: none;
+    transition: border 0.2s ease;
+}
+
+.form-container input:focus,
+.form-container select:focus {
+    border-color: #1f4b36;
+}
+
+.submit-btn {
+    background-color: #555;
+    color: #ffffff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+}
+.messages {
+    margin-bottom: 20px;
+}
+
+.messages .msg {
+    background-color: #d4edda; /* light green */
+    color: #333;;
+    padding: 10px 15px;
+    border-left: 4px solid #27ae60;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.back-link {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #555;;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+}

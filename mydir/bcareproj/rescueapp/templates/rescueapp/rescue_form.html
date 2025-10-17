@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block mycontent %}
+<link rel="stylesheet" href="{% static 'css/rescue_form.css' %}">
+
+<div class="rescue-form-container">
+    <h2>🐾 Report a Rescue 🪶</h2>
+    {% if submission_message %}
+    <div style="background-color:rgb(208, 227, 189)">
+        <p style="color:rgb(54, 84, 24)">{{ submission_message }}</p>
+        <p style="color:rgb(54, 84, 24);">Our nearby volunteers have been informed. They will reach out to you soon</p>
+        {% if map_link %}
+            <p style="color:rgb(54, 84, 24)">Your current location: <a href="{{ map_link }}" target="_blank">View on Google Maps</a></p>
+        {% endif %}
+        <a href="{% url 'rescue_page' %}" class="back-link">← Return to User Story Tab</a>
+    </div>
+    {% endif %}
+    <p>Please provide details so we can help the animal as quickly as possible.</p>
+
+    <form method="POST" action="{% url 'rescue_form' %}" enctype="multipart/form-data" class="rescue-form">
+        {% csrf_token %}
+        <!-- Animal Type -->
+        <label for="animal_type">Animal Type:</label>
+        <select id="animal_type" name="animal_type" required>
+            <option value="">--Select--</option>
+            <option value="Dog">Dog</option>
+            <option value="Cat">Cat</option>
+            <option value="Bird">Bird</option>
+            <option value="Cow">Cow</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <!-- Condition -->
+        <label for="condition">Condition:</label>
+        <select id="condition" name="condition" required>
+            <option value="">Select</option>
+            <option value="Injured">Injured</option>
+            <option value="Sick">Sick</option>
+            <option value="Starving">Starving</option>
+            <option value="Abandoned">Abandoned</option>
+            <option value="Trapped">Trapped</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <!-- Location -->
+        <label for="location">Location:</label>
+        <textarea id="location" name="location" placeholder="Enter address, nearby landmark, or city" required></textarea>
+
+        <!-- Contact Info -->
+        <label for="contact">Your Contact (optional):</label>
+        <input type="text" id="contact" name="contact" placeholder="Phone">
+
+        <!-- Image Upload -->
+        <label for="image">Upload Image(required):</label>
+        <input type="file" id="image" name="image" accept="image/*" required>
+
+        <!-- Extra Notes -->
+        <label for="notes">Additional Notes:</label>
+        <textarea id="notes" name="notes" placeholder="Describe the situation..."></textarea>
+
+        <!-- Submit -->
+        <button type="submit">Submit Rescue Request</button>
+    </form>
+
+</div>
+{% endblock %}

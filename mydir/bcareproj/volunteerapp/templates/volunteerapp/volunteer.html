@@ -1,0 +1,325 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block mycontent %}
+<link rel="stylesheet" href="{% static 'css/volunteer.css' %}">
+
+<section class="volunteer-hero">
+  <div class="hero-inner">
+    <!-- LEFT: Text -->
+    <div class="hero-text">
+      <h1>Meet Our Volunteers & Community Heroes</h1>
+      <p class="subheading">Together, we rescue, feed, and care for animals & birds in need</p>
+      <p class="intro-line">From street rescues to adoption drives — our BuddyCare volunteers are always ready to lend a helping hand. Explore their stories and find who can support you in your area.</p>
+    </div>
+
+    <!-- RIGHT: Image -->
+    <figure class="hero-image">
+      <img src="{% static 'images/volunteerhero.jpg' %}"
+           alt="BuddyCare volunteers helping animals"
+           loading="lazy">
+    </figure>
+  </div>
+</section>
+<!--2nd Part-->
+<section class="volunteer-intro">
+  <div class="intro-container">
+    <div class="intro-box">
+      <h2>Why Volunteers Matter</h2>
+      <p class="motivation-text">
+        Every rescue, every adoption, and every life saved is made possible by people like you.  
+        Our volunteers are the heartbeat of BuddyCare — feeding strays, rescuing birds, supporting adoptions, and spreading awareness.  
+        Together, we make sure no paw or wing is left behind.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- 3rd Part: Volunteer Roles Section -->
+<section class="volunteer-roles">
+  <div class="roles-container">
+    <h2>🐾 How Our Volunteers Help</h2>
+    <p class="roles-text">
+      Our BuddyCare volunteers work selflessly to make a difference in the lives of animals and birds.  
+      Here’s how they contribute:
+    </p>
+
+    <div class="roles-grid">
+      <div class="role-card">
+        <img src="{% static 'images/help1.jpg' %}" alt="Animal Rescue">
+        <h3>Rescue & First Aid</h3>
+        <p>Providing immediate care to injured animals and birds in emergencies.</p>
+      </div>
+
+      <div class="role-card">
+        <img src="{% static 'images/help2.jpg' %}">
+        <h3>Adoption Support</h3>
+        <p>Helping street animals find loving families through adoption drives.</p>
+      </div>
+
+      <div class="role-card">
+        <img src="{% static 'images/help3.jpg' %}" alt="Community Awareness">
+        <h3>Community Awareness</h3>
+        <p>Spreading knowledge about pet care, responsible feeding, and animal rights.</p>
+      </div>
+
+      <div class="role-card">
+        <img src="{% static 'images/help4.jpg' %}" alt="Medical Assistance">
+        <h3>Medical Assistance</h3>
+        <p>Connecting animals with vets, medicine suppliers, and treatment support.</p>
+      </div>
+
+      <div class="role-card">
+        <img src="{% static 'images/help5.jpg' %}" alt="Animal & Bird Learning">
+        <h3>Learn & Train Animals</h3>
+        <p>Volunteers who train and guide animals and birds for better care and behavior</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--4th part list of volunteers-->
+<section class="volunteer-list" id="contact">
+  <div class="list-container">
+    <h2>Meet Our BuddyCare Volunteers</h2>
+    <p class="list-intro">These kind-hearted people are already helping animals & birds through BuddyCare.</p>
+
+    <div class="volunteer-grid">
+      <!-- Volunteer 1 -->
+      <div class="volunteer-card">
+        <div class="card-header">
+          <div class="avatar">
+            <img src="{% static 'images/dogicon.png' %}" alt="Street Rescuer">
+          </div>
+          <h3 class="volunteer-type">Street Rescuer</h3>
+        </div>
+        <div class="volunteer-details">
+          <p><strong>Name:-</strong> Priya Sharma</p>
+          <p><strong>Contact:-</strong> +91 9876543210</p>
+          <p>3 Years | Feeding & First Aid</p>
+          <p>Location: Mumbai</p>
+        </div>
+      </div>
+
+      <!-- Volunteer 2 -->
+      <div class="volunteer-card">
+        <div class="card-header">
+          <div class="avatar">
+            <img src="{% static 'images/caticon.png' %}" alt="Adoption Support">
+          </div>
+          <h3 class="volunteer-type">Adoption Support</h3>
+        </div>
+        <div class="volunteer-details">
+          <p><strong>Name:-</strong> Rahul Verma</p>
+          <p><strong>Contact:-</strong> +91 9123456780</p>
+          <p>2 Years | Adoption Drives</p>
+          <p>Location: Pune</p>
+        </div>
+      </div>
+
+      <!-- Volunteer 3 -->
+      <div class="volunteer-card">
+        <div class="card-header">
+          <div class="avatar">
+            <img src="{% static 'images/birdicon.png' %}" alt="Bird Rescue">
+          </div>
+          <h3 class="volunteer-type">Bird Rescuer</h3>
+        </div>
+        <div class="volunteer-details">
+          <p><strong>Name:-</strong> Sanya Mehta</p>
+          <p><strong>Contact:-</strong> +91 9988776655</p>
+          <p>4 Years | Kite Festival Rescues</p>
+          <p>Location: Ahmedabad</p>
+        </div>
+      </div>
+
+      <!-- Volunteer 4 -->
+      <div class="volunteer-card">
+        <div class="card-header">
+          <div class="avatar">
+            <img src="{% static 'images/bowlicon.png' %}" alt="Feeding Volunteer">
+          </div>
+          <h3 class="volunteer-type">Feeding Volunteer</h3>
+        </div>
+        <div class="volunteer-details">
+          <p><strong>Name:-</strong> Amit Joshi</p>
+          <p><strong>Contact:-</strong> +91 9876501234</p>
+          <p>5 Years | Street Feeding</p>
+          <p>Location: Delhi</p>
+        </div>
+      </div>
+
+      <!-- Volunteer 5 -->
+      <div class="volunteer-card">
+        <div class="card-header">
+          <div class="avatar">
+            <img src="{% static 'images/veticon.png' %}" alt="Medical Support">
+          </div>
+          <h3 class="volunteer-type">Medical Support</h3>
+        </div>
+        <div class="volunteer-details">
+          <p><strong>Name:-</strong> Neha Kapoor</p>
+          <p><strong>Contact:-</strong> +91 9234567890</p>
+          <p>3 Years | Vet Assistance</p>
+          <p>Location: Bangalore</p>
+        </div>
+      </div>
+
+      <!-- Volunteer 6 -->
+      <div class="volunteer-card">
+        <div class="card-header">
+          <div class="avatar">
+            <img src="{% static 'images/readicon.png' %}" alt="Community Educator">
+          </div>
+          <h3 class="volunteer-type">Community Educator</h3>
+        </div>
+        <div class="volunteer-details">
+          <p><strong>Name:-</strong> Jiya Patel</p>
+          <p><strong>Contact:-</strong> +91 9876501234</p>
+          <p>3 Years | Street Feeding</p>
+          <p>Location: Ghatkopar</p>
+        </div>
+      </div>
+
+      <!-- Volunteer 7 -->
+       <div class="volunteer-card">
+        <div class="card-header">
+            <div class="avatar">
+                <img src="{% static 'images/takericon.png' %}" alt="Pet Caretaker">
+            </div>
+            <h3 class="volunteer-type">Pet Caretaker</h3>
+        </div>
+        <div class="volunteer-details">
+            <p><strong>Name:-</strong> Bhoomi Mehta</p>
+            <p><strong>Contact:-</strong> +91 9876123456</p>
+            <p>2 Years | Daily Pet Care & First Aid</p>
+            <p>Location: Thane</p>
+        </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!--5th part: Group-->
+<section class="volunteer-groups" >
+  <div class="groups-container">
+    <h2 class="groups-heading"><img src="{% static 'images/teamname.jpg' %}" class="team-icon">
+        Our Volunteer Groups
+    </h2>
+    <p class="groups-intro">Our volunteers come together in organized groups to help animals & birds consistently.</p>
+
+    <div class="group-flow">
+      <div class="group-icon">
+        <img src="{% static 'images/group1.jpg' %}">
+      </div>
+      <div class="group-info">
+        <h3>Street Feeding Crew</h3>
+        <p>Weekly feeding sessions for stray dogs & cats.</p>
+        <p>Schedule: Every Saturday</p>
+        <a href="{% url 'groupform' %}" class="join-btn">Join This Group</a>
+      </div>
+    </div>
+
+    <div class="group-flow">
+      <div class="group-icon">
+        <img src="{% static 'images/group2.jpeg' %}" alt="Bird Rescue">
+      </div>
+      <div class="group-info">
+        <h3>Bird Rescue Team</h3>
+        <p>Monthly rescue & care drives during kite festivals.</p>
+        <p>Schedule: 1st Sunday of every month</p>
+        <a href="{% url 'groupform' %}" class="join-btn">Join This Group</a>
+      </div>
+    </div>
+
+    <div class="group-flow">
+      <div class="group-icon">
+        <img src="{% static 'images/group3.webp' %}" alt="Adoption Drive">
+      </div>
+      <div class="group-info">
+        <h3>Adoption Support Squad</h3>
+        <p>Helping animals find loving homes.</p>
+        <p>Schedule: Every 2nd Saturday</p>
+        <a href="{% url 'groupform' %}" class="join-btn">Join This Group</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 6th Part: Call To Action -->
+<section class="volunteer-cta">
+  <div class="cta-container">
+    
+    <!-- Left Side: Guide & Criteria -->
+    <div class="cta-text">
+      <h2>Ready to Join BuddyCare? 🐾</h2>
+      <p class="cta-guide">
+        Become part of our mission to rescue, feed, and care for animals & birds.  
+        Here’s what we look for in our volunteers:
+      </p>
+      <ul class="criteria-list">
+        <li>Genuine love for animals & birds</li>
+        <li>Minimum age: 16 years (with parental consent if under 18)</li>
+        <li>Commitment to dedicate a few hours weekly</li>
+        <li>Willingness to help in your local community</li>
+        <li>Basic knowledge of first aid is a plus (not mandatory)</li>
+      </ul>
+    </div>
+
+    <!-- Right Side: Button -->
+    <div class="cta-action">
+      <a href="{% url 'groupform' %}" class="cta-btn">Join as Volunteer</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- 7th Part: FAQ Section -->
+<section class="volunteer-faq">
+  <div class="faq-container">
+    <h2 class="faq-heading"><img src="{% static 'images/faq.png' %}" class="faq-icon">
+        Frequently Asked Questions </h2>
+    <p class="faq-intro">Have questions about volunteering with BuddyCare? We’ve got you covered.</p>
+
+    <div class="faq-item">
+      <button class="faq-question">Who can become a volunteer? <span>+</span></button>
+      <div class="faq-answer">
+        <p>Anyone with a love for animals and a willingness to help can become a volunteer. Minimum age is 16 years (with consent if under 18).</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Do I need prior experience? <span>+</span></button>
+      <div class="faq-answer">
+        <p>No prior experience is required. We provide basic training and guidance for all new volunteers.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">How much time do I need to commit? <span>+</span></button>
+      <div class="faq-answer">
+        <p>We encourage at least 2–3 hours per week, but you can choose the time and group activities that suit you best.By Contacting our team</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Is there any fee to join? <span>+</span></button>
+      <div class="faq-answer">
+        <p>No, volunteering with BuddyCare is free. Your time and compassion are the most valuable contributions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8th Part: Volunteer Stories CTA -->
+<section class="volunteer-stories-cta">
+  <div class="stories-container">
+    <h2>Be Inspired by Our Volunteers' Stories</h2>
+    <p>See how our volunteers are making a difference in the lives of animals & birds. Their dedication can inspire your journey too!</p>
+    <a href="{% url 'stories' %}?tab=volunteer" class="stories-btn">View Stories</a>
+  </div>
+</section>
+
+
+<script src="{% static 'js/volunteer.js' %}"></script>
+{% endblock %}

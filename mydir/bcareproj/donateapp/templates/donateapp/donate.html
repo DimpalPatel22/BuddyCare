@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block mycontent %}
+<link rel="stylesheet" href="{% static 'css/donate.css' %}">
+
+<section class="donation-section">
+    <div class="donation-container">
+        
+        <!-- LHS - Info & Instructions -->
+        <div class="donation-info">
+            <h2>How Donation Works 🐾</h2>
+            <ol>
+                <li>Select <strong>Online</strong> or <strong>Offline</strong> donation</li>
+                <li>Fill in your details</li>
+                <li>Contribute securely</li>
+                <li>Get a thank-you & updates on your impact</li>
+            </ol>
+
+            <h3>What You Can Donate Offline 💡</h3>
+            <ul>
+                <li>Pet Food (dry & wet)</li>
+                <li>Medicines & First Aid Kits</li>
+                <li>Bird Grains & Feeders</li>
+                <li>Old Blankets, Cages, Mats</li>
+                <li>Veterinary Supplies</li>
+            </ul>
+
+            <!-- Inspiring Quotes -->
+            <p class="impact-quote">“Giving is not just about making a donation, it’s about making a difference.” 💕</p>
+        </div>
+
+        <!-- RHS - Donation Form -->
+        <div class="donation-form-wrapper">
+            <h2>Support BuddyCare 💖</h2>
+            <p class="form-subtext">Your kindness helps us save & care for animals and birds.</p>
+
+            <form method="POST" class="donation-form">
+                {% csrf_token %}
+                <input type="hidden" name="next" value="{{ request.GET.next }}">
+                
+                <label for="name">Your Name</label>
+                <input type="text" name="name" placeholder="Full Name" required>
+
+                <label for="contact">Contact (optional)</label>
+                <input type="text" name="contact" placeholder="Phone">
+
+                <label for="donation_type">Donation Type</label>
+                <select name="donation_type" required onchange="handleDonationType(this.value)">
+                    <option value="">Select</option>
+                    <option value="online">Online</option>
+                    <option value="offline">Offline</option>
+                </select>
+
+                <!-- Hidden offline link -->
+                <div id="offline-link" style="display:none;margin-top:1px; text-align:right;">
+                    <a href="#" id="offlineLinkBtn" class="back-home">
+                        👉 Continue with Offline Donation
+                    </a>
+                </div>
+
+                <script>
+                function handleDonationType(value) {
+                    const linkDiv = document.getElementById("offline-link");
+                    const offlineLink = document.getElementById("offlineLinkBtn");
+                    
+                    if (value === "offline") {
+                        const name = document.querySelector('input[name="name"]').value;
+                        const contact = document.querySelector('input[name="contact"]').value;
+                        offlineLink.href = `/donate/offline/?name=${encodeURIComponent(name)}&contact=${encodeURIComponent(contact)}`;
+                        linkDiv.style.display = "block";
+                    } else {
+                        linkDiv.style.display = "none";
+                    }
+                }
+                </script>
+
+                <label for="amount">Donation Amount (₹)</label>
+                <input type="number" name="amount" placeholder="Enter Amount" required>
+
+                <button type="submit" class="donate-btn">Donate Now 💖</button>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

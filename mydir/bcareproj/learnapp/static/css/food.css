@@ -1,0 +1,307 @@
+/* Hero Section */
+.food-hero {
+  background: linear-gradient(135deg, #ffe7d6, #ffb347);
+  text-align: center;
+  padding: 90px 20px;
+  border-radius: 20% 0 50% 50% / 0 0 10% 10%;
+  box-shadow: inset 0 0 50px rgba(0,0,0,0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.food-hero h1 {
+  font-size: 2.89rem;
+  color: #4b2e2e;
+  margin-bottom: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  animation: slideInFade 1.2s ease-out forwards;
+}
+
+.food-hero p {
+  font-size: 1.3rem;
+  color: #5a3b3bd2;
+  max-width: 700px;
+  margin: auto;
+  line-height: 1;
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* Animations */
+@keyframes slideInFade { from { opacity:0; transform: translateY(-30px);} to {opacity:1; transform: translateY(10px);} }
+@keyframes fadeInUp { from { opacity:0; transform: translateY(30px);} to {opacity:1; transform: translateY(0);} }
+
+/*Food tips*/
+.food-tips {
+  padding: 25px 10px;
+  text-align: center;
+}
+
+.food-tips h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.tips-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  align-items: flex-start;
+  overflow-x: hidden; 
+}
+
+.tip-box {
+  flex: 1;
+  min-width: 340px;
+  max-width: 400px;
+  padding: 20px 15px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  text-align: left;
+
+  /* Remove scroll */
+  max-height: none;  
+  overflow: visible; 
+}
+
+.do-box {
+  background-color: #e6f7e6e2;
+}
+
+.dont-box {
+  background-color: #ffe6e6;
+}
+
+.tip-box h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1px;
+  margin-top: 2px;
+}
+
+.topic {
+  margin-bottom: 15px; 
+}
+
+.topic h4 {
+  font-size: 1.15rem;
+  margin-bottom: 2px;
+  margin-top: 2px;
+}
+
+.topic ul {
+  list-style: disc;
+  padding-left: 18px;
+  margin: 0;
+}
+
+.topic ul li {
+  margin-bottom: 6px;
+}
+/* Feeding Schedule Section */
+.schedule-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px 10px;
+  margin-top: 20px;
+}
+
+.schedule-card {
+  background: #fff8e6;
+  border-left: 6px solid #ffb347; /* accent line for clarity */
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.schedule-card h3 {
+  font-size: 1.25rem;
+  color: #4b2e2e;
+  margin-bottom: 8px;
+}
+
+.schedule-card p {
+  font-size: 1rem;
+  color: #5a3b3b;
+  line-height: 1.4;
+}
+.schedule-card img.icons {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-top: 4px; 
+}
+/* Hover Effect */
+.schedule-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+/* Quick Recipes Section */
+.quick-recipes {
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #ffe6f0, #e0f7fa); 
+  border-radius: 30px 30px 0 0;
+  text-align: center;
+  position: relative;
+}
+
+.quick-recipes h2 {
+  font-size: 2rem;
+  color: #ff6f61; /* coral */
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.quick-recipes p {
+  font-size: 1rem;
+  color: #555555;
+  margin-bottom: 30px;
+}
+
+/* Stack container */
+.recipes-stack {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: -50px; /* overlap effect */
+  position: relative;
+}
+
+/* Each Recipe Card */
+.recipe-card {
+  flex: 0 0 260px;
+  border-radius: 20px;
+  padding: 25px 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  z-index: 1;
+}
+
+.recipe-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.482);
+  z-index: 5;
+}
+/* Different Background Colors for Each Card */
+.recipe-card:nth-child(1) { background: #fff0f5; } 
+.recipe-card:nth-child(2) { background: #e0fff7; } 
+.recipe-card:nth-child(3) { background: #fffbe0; } 
+.recipe-card:nth-child(4) { background: #ffe0f0; } 
+
+/* Layering effect */
+.recipe-card:nth-child(1) { z-index: 1; transform: rotate(-1deg);}
+.recipe-card:nth-child(2) { z-index: 2; transform: rotate(1deg);}
+.recipe-card:nth-child(3) { z-index: 3; transform: rotate(-1deg);}
+.recipe-card:nth-child(4) { z-index: 4; transform: rotate(1deg);}
+
+/* Recipe Icon */
+.recipe-card img.recipe-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 12px;
+  border-radius: 50px;
+  background: #fff;
+  padding: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* Recipe Title & Text */
+.recipe-card h3 {
+  font-size: 1.3rem;
+  color: #ff6f61; /* coral */
+  margin-bottom: 8px;
+}
+
+.recipe-card p {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.5;
+  text-align: left;
+}
+/* Awareness Strip */
+.awareness-strip {
+  width: 100%;
+  padding: 30px 15px;
+  margin-top: 40px;
+  background: #fffaf0; /* light, clean background */
+  border-radius: 20px;
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.03);
+}
+
+.awareness-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.awareness-header h2 {
+  font-size: 1.8rem;
+  color: #d35400;
+  margin-bottom: 5px;
+}
+
+.awareness-header p {
+  font-size: 1rem;
+  color: #5a3b3b;
+}
+
+.awareness-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 9px;
+}
+
+.awareness-box {
+  background-color: #fff7e6;
+  color: #d35400;
+  padding: 11px 13px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  text-align: center;
+  flex: 1 1 210px; /* responsive width */
+  min-width: 190px;
+}
+/* Food CTA Section */
+.food-cta {
+  background: linear-gradient(90deg, #fef9f0, #252524);
+  padding: 35px 20px;
+  text-align: center;
+  border-radius: 15px;
+  margin-top: 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+}
+
+.food-cta p {
+  color: #5a3b3b;
+  margin-bottom: 20px;
+  font-weight: 1000;
+  font-size: 1.2rem;
+}
+
+.food-cta .cta-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #ffb347, #ffcc33);
+  color: #fff;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.food-cta .cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+body {
+  overflow-x: hidden; /* removes any accidental horizontal scroll */
+}

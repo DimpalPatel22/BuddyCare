@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block mycontent %}
+<link rel="stylesheet" href="{% static 'css/donate_success.css' %}">
+
+<section class="donation-success">
+    <h2>Thank You for Your Donation! 🎉</h2>
+    <p>Your support helps us save more lives.</p>
+    <a href="{% url 'home' %}" class="back-home">Go Back Home</a>
+</section>
+{% endblock %}

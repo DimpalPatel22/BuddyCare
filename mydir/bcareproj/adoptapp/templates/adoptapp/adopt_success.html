@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block mycontent %}
+<link rel="stylesheet" href="{% static 'css/adopt_form.css' %}">
+
+<div class="adopt-success-container">
+    <h2>🎉 Thank You for Your Application! 🎉</h2>
+    <p>Your adoption form has been received by our volunteer team.</p>
+    <p>We will connect with you soon. Meanwhile, get ready to welcome your new furry friend! </p>
+    <div class="cute-quote">
+        "Every paw deserves a loving home — and now, you’re making one happy! "
+    </div>
+    <a href="{% url 'adopt_page' %}" class="btn-back">Back to Adoption Page</a>
+</div>
+{% endblock %}

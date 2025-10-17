@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block mycontent %}
+
+<link rel="stylesheet" href="{% static 'css/learn.css' %}">
+
+<!-- Hero Section -->
+<section class="help-hero">
+  <div class="hero-inner">
+    <h1>Learn & Help – Caring for Paws, Wings & Hearts 🐾</h1>
+    <p>Practical tips, safety advice, and awareness to protect and care for animals & birds.</p>
+  </div>
+</section>
+
+<!-- 4 Main Knowledge Cards -->
+<section class="help-cards">
+  <h2>Explore Key Topics</h2>
+  <div class="card-container">
+    <a href="{%url 'emergency' %}" class="help-card">
+      <h3>Emergency Care</h3>
+      <p>Quick actions to save lives during accidents or injuries.</p>
+    </a>
+
+    <a href="{%url 'food' %}" class="help-card">
+      <h3>Feeding & Nutrition</h3>
+      <p>Know what, when, and how to feed animals & birds safely.</p>
+    </a>
+
+    <a href="{%url 'dangerous' %}" class="help-card">
+      <h3>Behaviour & Safety</h3>
+      <p>Understand animal behaviour for safe interaction.</p>
+    </a>
+
+    <a href="{%url 'health' %}" class="help-card">
+      <h3>Health Awareness</h3>
+      <p>Basic care tips, vaccinations, and health awareness guides.</p>
+    </a>
+  </div>
+</section>
+
+<!-- Seasonal Awareness Section -->
+<section class="seasonal-awareness">
+  <h2>🌦 Seasonal Care Tips</h2>
+  <div class="seasonal-cards">
+    
+    <!-- Summer -->
+    <div class="season-card summer">
+      <h3>Summer</h3>
+      <h4>For Birds</h4>
+      <p>Keep shallow bowls of clean water on balconies, terraces, or windowsills. Avoid metal containers as they heat up. Place some grains or fruits in shaded areas.</p>
+      <h4>For Animals</h4>
+      <p>Provide fresh water bowls on the street or outside your home. Create shaded resting spots using cloth or cardboard. Avoid walking pets on hot concrete to prevent paw burns.</p>
+    </div>
+    
+    <!-- Winter -->
+    <div class="season-card winter">
+      <h3>Winter</h3>
+      <h4>For Birds </h4>
+      <p>Cover cages or resting areas with cloth at night. Place old woolens or dry leaves in corners where they perch. Ensure access to food with higher energy (like grains and nuts).</p>
+      <h4>For Animals </h4>
+      <p>Provide warm shelters using cardboard boxes with cloth/blankets. Street animals benefit from temporary “community shelters.” If you own a pet, avoid bathing them too often during peak cold.</p>
+    </div>
+    
+    <!-- Festivals -->
+    <div class="season-card festival">
+      <h3>Festivals</h3>
+      <h4>For Birds </h4>
+      <p>During kite flying festivals, keep first-aid supplies ready (antiseptic, cotton). Report injured birds immediately to local NGOs. Avoid flying kites near bird nesting areas.</p>
+      <h4>For Animals</h4>
+      <p>During fireworks, keep pets indoors with windows closed. Play soft music to calm them. For street animals, provide temporary safe zones like basements or garages. Avoid feeding animals near crowded festival zones.</p>
+    </div>
+    
+  </div>
+</section>
+
+
+<!-- CTA -->
+<section class="help-cta" id="sharetips">
+  <p>Got a useful tip or story to share?</p>
+  <a href="{%url 'tipform' %}" class="cta-btn">Share Your Tips</a>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const hash = window.location.hash;
+  if (hash === "#share-tips-cta") {
+    const ctaSection = document.querySelector(hash);
+    if (ctaSection) {
+      setTimeout(() => {
+        ctaSection.scrollIntoView({ behavior: "smooth", block: "center" });
+      }, 400); // delay allows page to fully render
+    }
+  }
+});
+</script>
+
+<!-- Explore More Note -->
+<section class="explore-note">
+  <p>To explore more, use the 👉<strong>Help/Learn dropdown menu</strong> above.</p>
+</section>
+
+<!-- Approved Tips Section -->
+<section class="approved-tips">
+  <h2>Tips from the BuddyCare Community</h2>
+  {% if tips %}
+    <ul class="tips-list">
+      {% for tip in tips %}
+        <li>
+          <strong>{{ tip.username }}:</strong> 
+          <em>{{ tip.tip_type }}</em><br>
+          {{ tip.tip_text }}
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No tips approved yet. Be the first to share one! 🐾</p>
+  {% endif %}
+</section>
+
+
+{% endblock %}

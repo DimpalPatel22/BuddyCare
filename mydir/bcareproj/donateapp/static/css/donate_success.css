@@ -1,0 +1,53 @@
+/* Donation Success Page */
+.donation-success {
+    padding: 60px 20px;
+    text-align: center;
+    background: #fff8f5;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    margin: 50px auto;
+    max-width: 600px;
+}
+
+.donation-success h2 {
+    font-size: 2rem;
+    color: #e91e63;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.donation-success p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.back-home {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1rem;
+    color: #fff;
+    background: #e91e63;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.back-home:hover {
+    background: #d81b60;
+    transform: translateY(-2px);
+}
+
+.donation-success h2::after {
+    content: "🐾";
+    display: inline-block;
+    margin-left: 10px;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}

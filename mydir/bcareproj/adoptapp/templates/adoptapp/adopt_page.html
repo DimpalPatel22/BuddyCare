@@ -1,0 +1,289 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block mycontent %}
+<link rel="stylesheet" href="{% static 'css/adopt_page.css' %}">
+
+<!-- 1st Hero Section -->
+<div class="hero-adopt">
+    <div class="hero-overlay"></div>
+    <div class="hero-text">
+        <h1>Find Your Furry Friend</h1>
+        <p>Give a loving home to a pet in need<br>Turn a Life Around — Adopt Love, Adopt Happiness!</p>
+        <a href="#pets-section" class="btn-adopt">Adopt Now</a>
+    </div>
+</div>
+
+<!--2nd section-->
+<div class="intro-adopt">
+    <p>
+        Every paw, every wing, every heart deserves a home. 
+        BuddyCare helps you find your new best friend and give them the love they’ve been waiting for.
+    </p>
+</div>
+
+<!--3rd section-->
+<div class="adopt-tabs-wrapper" id="pets-section">
+
+    <!-- Radio inputs -->
+    <input type="radio" name="adopt-tab" id="adopt-dogs" checked>
+    <input type="radio" name="adopt-tab" id="adopt-cats">
+    <input type="radio" name="adopt-tab" id="adopt-birds">
+    <input type="radio" name="adopt-tab" id="adopt-street">
+    
+    <div class="adopt-tabs">
+        <label for="adopt-dogs">Dogs / Puppies</label>
+        <label for="adopt-cats">Cats / Kittens</label>
+        <label for="adopt-birds">Birds</label>
+        <label for="adopt-street">Street Animals</label>
+    </div>
+
+    <!-- Tab content -->
+    <div class="tab-content">
+        {% include 'adoptapp/adopt_list.html' %}
+    </div>
+</div>
+
+<!-- 4th Adoption Guide -->
+<div class="adopt-process" id="adopt-guide">
+    <h2>How to Adopt in BuddyCare</h2>
+    <div class="steps-container">
+        
+        <div class="step-box">
+            <img src="{% static 'images/step1.jpg' %}" alt="Choose Pet">
+            <h3>Choose Your Pet</h3>
+            <p>Browse dogs, cats, birds, or street animals. Select the one you feel connected with.</p>
+        </div>
+
+        <div class="step-box">
+            <img src="{% static 'images/form.jpg' %}" alt="Fill Form">
+            <h3>Fill Adoption Form</h3>
+            <p>Click <b>Adopt Now</b> and provide your details, lifestyle, and pet preferences.</p>
+        </div>
+
+        <div class="step-box">
+            <img src="{% static 'images/contact.jpg' %}" alt="Verification">
+            <h3>Verification</h3>
+            <p>Our team will contact you for verification and guide you through the process.</p>
+        </div>
+
+        <div class="step-box">
+            <img src="{% static 'images/meet.jpg' %}" alt="Meet & Greet">
+            <h3>Meet & Greet</h3>
+            <p>We arrange a meet-up so you and the pet can interact before final adoption.</p>
+        </div>
+
+        <div class="step-box">
+            <img src="{% static 'images/welcome.jpg' %}" alt="Welcome Home">
+            <h3>Welcome Home</h3>
+            <p>Complete the paperwork, adopt officially, and give your new friend a loving home 🎉</p>
+        </div>
+    </div>
+</div>
+
+<!--5th section stories-->
+<div class="adopt-success-wall">
+    <h2>Adoption Success Stories 🐾</h2>
+    <p>From rescue to forever homes – here are some heartfelt journeys of pets who found love through BuddyCare</p>
+
+    <div class="success-carousel">
+        <div class="carousel-track">
+
+            <!-- Slide 1 -->
+            <div class="slide active">
+                <img src="{% static 'images/story1.jpg' %}" alt="Simba">
+                <div class="caption">
+                    <h3>Simba</h3>
+                    <p>
+                        Simba was once a frightened stray pup roaming the busy streets of Pune. 
+                        Malnourished and shy, he was rescued by BuddyCare volunteers. 
+                        After weeks of care and love, Simba’s playful spirit returned. 
+                        Today, he enjoys evening walks, cozy naps, and endless cuddles in his new home. 
+                        From a lonely street to a joyful family dog – Simba’s journey is pure happiness!
+                    </p>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide">
+                <img src="{% static 'images/story2.jpg' %}" alt="Luna">
+                <div class="caption">
+                    <h3>Luna</h3>
+                    <p>
+                        Luna was found as a tiny kitten abandoned near a market. 
+                        Weak and scared, she was fostered with warmth until she found the perfect family. 
+                        Now, Luna spends her days chasing toy balls, curling up on laps, 
+                        and purring her way into everyone’s heart. 
+                        She went from abandoned to adored – Luna is living her dream life!
+                    </p>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide">
+                <img src="{% static 'images/story3.jpg' %}" alt="Kiwi">
+                <div class="caption">
+                    <h3>Kiwi </h3>
+                    <p>
+                        Kiwi, a little pigeon, was rescued after being injured during a kite festival. 
+                        With timely treatment and gentle care, she regained her strength. 
+                        Today, Kiwi brings joy with her cheerful chirps and playful whistles, 
+                        filling her new family’s home with love and music. 
+                        Her story reminds us that even the smallest wings deserve a chance to heal and fly again.
+                    </p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="{% static 'images/saathi.jpg' %}" alt="Street Dog">
+                <div class="caption">
+                    <h3>Loyal Friend-Named as Satthi</h3>
+                    <p>
+                        Not every bond is about adoption – sometimes it’s about pure friendship. 
+                        Every evening when I return home, a street dog waits at the corner, wagging his tail with excitement. 
+                        He doesn’t need words, just a pat on the head and a smile to know he’s loved. 
+                        This unspoken bond reminds us that animals don’t just need homes – they also need hearts that care. 
+                        He is not “my pet”, but truly my best friend on the streets.
+                    </p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="{% static 'images/baa.jpg' %}" alt="Crow">
+                <div class="caption">
+                    <h3>Baa’s Gathiya Friend</h3>
+                    <p>
+                        This story is close to my heart because it belongs to my Baa (grandmother).  
+                        Every afternoon during lunchtime, a crow would visit our home and patiently wait for his treat – 
+                        a piece of <em>gathiya</em>, the crunchy Gujarati snack my Baa loved to share.  
+                        The moment she stepped out with food, the crow would caw joyfully, almost as if saying “thank you.”  
+                        Over time, it became a daily ritual – a bond of love, trust, and silent understanding.  
+                        For Baa, that crow was never just a bird; he was a part of our family.  
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- Navigation Arrows -->
+        <button class="carousel-btn prev">&#10094;</button>
+        <button class="carousel-btn next">&#10095;</button>
+    </div>
+</div>
+
+<!--6th section train and guide-->
+<!-- 6th section train and guide -->
+<div class="pet-tips">
+    <h2>Pet Care Tips for New Parents</h2>
+    <p class="intro">
+        Just adopted a furry friend? Here are simple steps to guide you in giving them a safe, healthy and happy life.
+    </p>
+    <div class="tip-container">
+
+        <!-- Tip 1 -->
+        <div class="tip-card">
+            <div class="tip-front">
+                🥗 Nutrition First
+            </div>
+            <div class="tip-back">
+                Feed age-appropriate pet food and keep clean water always available. 
+                Avoid harmful items like chocolate, onions, grapes or spicy food, and stick to vet-approved meals and safe treats. 
+            </div>
+        </div>
+
+        <!-- Tip 2 -->
+        <div class="tip-card">
+            <div class="tip-front">
+                🩺 Vet Visits
+            </div>
+            <div class="tip-back">
+                Take your pet for an initial health check, vaccinations and deworming. 
+                Puppies and kittens need frequent visits, while adult pets usually require yearly boosters to stay healthy.
+            </div>
+        </div>
+
+        <!-- Tip 3 -->
+        <div class="tip-card">
+            <div class="tip-front">
+                🎾 Playtime & Training
+            </div>
+            <div class="tip-back">
+                Give daily exercise through walks or games like fetch to prevent boredom. 
+                Teach basic commands such as sit or stay using treats and love, never punishment. 
+            </div>
+        </div>
+
+        <!-- Tip 4 -->
+        <div class="tip-card">
+            <div class="tip-front">
+                🏡 Safe Space
+            </div>
+            <div class="tip-back">
+                Provide a cozy resting spot like a bed or mat in a quiet corner. 
+                This space helps pets feel secure, especially when guests come or loud noises scare them.
+            </div>
+        </div>
+
+        <!-- Tip 5 -->
+        <div class="tip-card">
+            <div class="tip-front">
+                ❤️ Patience & Bonding
+            </div>
+            <div class="tip-back">
+                Allow your pet time to adjust to their new home. 
+                A rescued dog may hide at first, but with gentle words, routine, and small treats, trust and love will grow naturally.
+            </div>
+        </div>
+
+    </div>
+</div>
+<!--7th last part-->
+<!-- Myth vs Fact Section -->
+<section class="myth-fact">
+    <h2>Myth vs Fact 🧩</h2>
+    <p class="subtitle">Clearing common doubts about adoption</p>
+
+    <div class="myth-container">
+
+        <div class="myth-row">
+            <p class="myth">❌ Street animals are aggressive</p>
+            <p class="fact">✅ They are often loyal, gentle, and adaptive.</p>
+        </div>
+
+        <div class="myth-row">
+            <p class="myth">❌ Cats don’t bond with owners</p>
+            <p class="fact">✅ Cats form deep emotional attachments.</p>
+        </div>
+
+        <div class="myth-row">
+            <p class="myth">❌ Older pets can’t adjust</p>
+            <p class="fact">✅ Senior pets are the most grateful companions.</p>
+        </div>
+
+        <div class="myth-row">
+            <p class="myth">❌ Adopted pets are unhealthy</p>
+            <p class="fact">✅ Shelters ensure pets are vaccinated & safe.</p>
+        </div>
+
+        <div class="myth-row">
+            <p class="myth">❌ Cows are just farm animals.</p>
+            <p class="fact">✅ Cows feel deeply and love companionship. They form strong bonds with friends and even humans. A gentle pat or kind words can make a cow nuzzle happily — showing that every creature deserves love</p>
+        </div>
+         <div class="myth-row">
+            <p class="myth">❌ Adoption is complicated</p>
+            <p class="fact">✅ With BuddyCare, adoption is simple, safe, and filled with love. Every paw, wing, and heart you welcome home makes the world a little brighter.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Final CTA Section -->
+<section class="adopt-final-cta">
+    <div class="cta-content">
+        <h2>Ready to Give a Forever Home? ❤️</h2>
+        <p>Every paw, wing, and heart deserves love. Find your perfect companion now!</p>
+        <a href="#pets-section" class="btn-adopt">View Available Pets 🐾</a>
+    </div>
+</section>
+
+
+<script src="{% static 'js/adopt_page.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block mycontent %}
+<link rel="stylesheet" href="{% static 'css/map.css' %}">
+<script src="{% static 'js/map.js' %}"></script>
+<link rel="stylesheet" href="{% static 'css/emergency.css' %}">
+
+<!-- Hero Section -->
+<section class="emergency-hero">
+  <div class="hero-text">
+    <h1>Emergency Help for Animals & Birds</h1>
+    <p>Quick guidance to save lives during emergencies</p>
+  </div>
+</section>
+
+<!-- What To Do Section -->
+<section class="emergency-guide">
+  <h2>Immediate Steps You Can Take</h2>
+  <div class="steps-container">
+    <div class="step-card">
+      <h3>Injured Animal</h3>
+      <p>Stay calm. Approach slowly and carefully. Call nearby vet or NGO immediately.</p>
+    </div>
+    <div class="step-card">
+      <h3>Injured Bird</h3>
+      <p>Pick gently with cloth. Keep in ventilated box. Avoid giving food/water forcefully.</p>
+    </div>
+    <div class="step-card">
+      <h3>Call Help</h3>
+      <p>Use our rescue page to alert NGOs/volunteers instantly with location & picture.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Emergency Scenarios Section -->
+<section class="emergency-scenarios">
+  <h2>Common Emergency Scenarios</h2>
+  <div class="scenario-cards">
+    <div class="scenario-card">
+      <h3>Bleeding Injury</h3>
+      <p>Apply gentle pressure with clean cloth. Avoid using unclean materials.</p>
+    </div>
+    <div class="scenario-card">
+      <h3>Hit by Vehicle</h3>
+      <p>Keep the animal calm and still. Cover gently and transport safely to vet.</p>
+    </div>
+    <div class="scenario-card">
+      <h3>Trapped Bird</h3>
+      <p>Use a soft cloth or box. Do not try to force wings; contact volunteer/rescue teams.</p>
+    </div>
+    <div class="scenario-card">
+      <h3>Snake Bite or Dangerous Animal</h3>
+      <p>Keep safe distance. Do not try to handle alone. Call expert help immediately.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Emergency Contacts Section -->
+<section class="emergency-contacts">
+  <h2>Emergency Contacts</h2>
+  <ul>
+    <li><strong>BuddyCare emergency:</strong> +91 8850619612</li>
+    <li><strong>PETA India:</strong> 98201 22602</li>
+    <li><strong>Blue Cross:</strong> 2230 0666 </li>
+    <li><strong>SPCA Mumbai:</strong> 022-24137518</li>
+  </ul>
+  <p class="note">*We recommend saving these numbers in your phone for quick access.</p>
+</section>
+
+<!--Map to find near pet shop,Medicine shop, vertinary shop-->
+
+{% include 'learnapp/map.html' %}
+
+<!-- Call to Action -->
+<section class="cta">
+  <h2>Need Help Right Now?</h2>
+  <a href="{% url 'rescue_page' %}" class="cta-btn">Report a Rescue</a>
+</section>
+
+{% endblock %}

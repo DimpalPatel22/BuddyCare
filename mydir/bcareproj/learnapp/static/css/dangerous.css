@@ -1,0 +1,363 @@
+/* Hero Section */
+.danger-hero {
+  background: linear-gradient(135deg, #ff4e51df, #f9d523d8);
+  padding: 80px 20px;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 0 40px 40px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.danger-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.danger-hero h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+}
+
+.danger-hero p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #fffde7; /* softer yellow tone */
+}
+/* Common Dangerous Situations */
+.danger-situations {
+  padding: 50px 10px;
+  background: #fff;
+  text-align: center;
+}
+
+.danger-situations h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #d32f2f;
+  font-weight: 700;
+}
+
+.situation-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.situation-card {
+  flex: 1 1 250px;
+  max-width: 300px;
+  background: #fafafa;
+  border-radius: 14px;
+  padding: 25px 20px;
+  border: 2px solid #f0f0f0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.situation-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+  border-color: #ff6f61;
+}
+
+.situation-card .icon {
+  font-size: 2.2rem;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.situation-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.situation-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Living Space Section */
+.living-space {
+  padding: 50px 80px;
+  background: linear-gradient(135deg, #f2f3f4, #aee4eb);
+  border-radius: 16px;
+  margin: 60px auto;
+  max-width: 1300px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  text-align: center;
+  margin-top: 10px;
+}
+
+.living-space h2 {
+  font-size: 2.2rem;
+  color: #00796b;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.living-space .intro {
+  font-size: 1.1rem;
+  color: #444;
+  max-width: 1100px;
+  margin: 0 auto 40px auto;
+  line-height: 1.7;
+}
+
+.living-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.living-steps .step {
+  background: #ffffff;
+  padding: 25px 20px;
+  border-radius: 14px;
+  border-left: 6px solid #00796b;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.living-steps .step:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.living-steps .step h3 {
+  font-size: 1.3rem;
+  color: #004d40;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.living-steps .step p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+/* Living Space Examples */
+.living-examples {
+  margin-top: 10px;
+  padding: 30px 30px;
+  text-align: left;
+}
+
+.living-examples h3 {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: #e65100; /* warm orange */
+  font-weight: 700;
+  text-align: center;
+}
+
+.living-examples .example {
+  background: #ffffff;
+  border-left: 6px solid #ff9800;
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.living-examples .example:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.living-examples .example h4 {
+  font-size: 1.2rem;
+  color: #bf360c;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.living-examples .example p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+}
+.example-header {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* space between image and heading */
+  margin-bottom: 10px;
+}
+
+.example-img {
+  width: 80px;  
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.example h4 {
+  font-size: 1.2rem;
+  color: #bf360c;
+  margin: 0;
+  font-weight: 600;
+}
+
+.example p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+  margin-top: 0;
+}
+/* Mini Do's & Don'ts - Simple & Clean */
+.mini-dos-donts {
+  margin: 50px auto;
+  text-align: center;
+  margin-top: 0px;
+}
+
+.mini-dos-donts h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.dos-donts-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 4px;
+}
+
+.dos, .donts {
+  flex: 1 1 250px;
+  max-width: 350px;
+  text-align: left;
+}
+
+.dos h4 {
+  color: #43a047; /* green */
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.donts h4 {
+  color: #e53935; /* red */
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.dos ul, .donts ul {
+  list-style-type: disc;
+  padding-left: 18px;
+  margin: 0;
+}
+
+.dos li, .donts li {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+/* Emergency Contacts - Simple */
+.emergency-contacts {
+  padding: 50px 20px;
+  max-width: 1000px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.emergency-contacts h3 {
+  font-size: 1.9rem;
+  color: #d32f2f;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.emergency-contacts p {
+  font-size: 1.05rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.contact-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.contact {
+  flex: 1 1 200px;
+  max-width: 250px;
+  text-align: left;
+}
+
+.contact h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #b71c1c;
+  margin-bottom: 6px;
+}
+
+.contact p {
+  font-size: 1rem;
+  color: #333;
+  margin: 0;
+}
+
+/* Emergency Contacts - Numbered Note */
+.emergency-contacts {
+  padding: 40px 20px;
+  max-width: 850px;
+  margin: 30px auto;
+  margin-top: 10px;
+  text-align: left;
+  background-color: #efd88cd9; 
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.emergency-contacts h3 {
+  font-size: 1.8rem;
+  color: #d32f2f;
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+.emergency-contacts p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.contact-note {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.8;
+  padding-left: 20px;
+}
+/* Awareness Tips */
+.awareness-tips {
+  max-width: 900px;
+  margin: 50px auto 80px auto;
+  padding: 25px 30px;
+  background-color: #e8f5e9; /* light green */
+  border-left: 6px solid #43a047; /* green accent */
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #2e7d32;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.awareness-tips .quote {
+  margin-top: 15px;
+  font-style: italic;
+  color: #1b5e20;
+  font-weight: 500;
+}

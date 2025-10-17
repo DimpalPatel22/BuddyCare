@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block mycontent %}
+
+<div style="max-width: 1000px; margin: 30px auto; padding: 20px; text-align: center;margin-top: 5px;">
+    <h2 style="margin-bottom: 10px;">🐾 Rescue Requests List</h2>
+
+    {% if rescue_requests %}
+        <table border="1" cellpadding="10" cellspacing="0" style="width: 100%; border-collapse: collapse; text-align: left; margin: 0 auto;">
+            <thead style="background-color: #f2f2f2;">
+                <tr>
+                    <th>ID</th>
+                    <th>Animal Type</th>
+                    <th>Condition</th>
+                    <th>Location</th>
+                    <th>Contact</th>
+                    <th>Notes</th>
+                    <th>Image</th>
+                    <th>Reported By</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for rescue in rescue_requests %}
+                <tr>
+                    <td>{{ rescue.id }}</td>
+                    <td>{{ rescue.animal_type }}</td>
+                    <td>{{ rescue.condition }}</td>
+                    <td>{{ rescue.location }}</td>
+                    <td>{{ rescue.contact }}</td>
+                    <td>{{ rescue.notes }}</td>
+                    <td>
+                        {% if rescue.image %}
+                            <img src="{{ rescue.image.url }}" alt="Rescue Image" width="80">
+                        {% else %}
+                            No Image
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if rescue.user %}
+                            {{ rescue.user.username }}
+                        {% else %}
+                            Guest
+                        {% endif %}
+                    </td>
+                    <td>{{ rescue.status }}</td>
+                    <td>{{ rescue.created_at|date:"Y-m-d H:i" }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p style="text-align:center; color:gray;">No rescue requests yet.</p>
+    {% endif %}
+</div>
+
+{% endblock %}

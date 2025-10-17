@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block mycontent %}
+<link rel="stylesheet" href="{% static 'css/donate.css' %}">
+
+<section class="donation-section">
+    <div class="donation-container">
+        <!-- LHS - Instructions -->
+        <div class="offline-instructions">
+            <h2>Offline Donation Instructions 🐾</h2>
+            <ol>
+                <li>Bring Pet Food (dry & wet), Medicines, or Blankets/Clothes.</li>
+                <li>Medicines must be sealed and not expired.</li>
+                <li>Visit our center during Mon–Sat, 10 AM – 6 PM.</li>
+            </ol>
+            <h3 style="color: #1976d2;">Address <img src="{% static 'images/location.png' %}" class="location-icon"></h3>
+            <ul>
+                <li>Bhaveshwar Nagar, Tilak Road, Ghatkopar, Mumbai</li>
+                <li>Phone: +91 8850619612</li>
+            </ul>
+            <p>Your visit shows love and care for animals & birds.</p>
+            <p class="impact-quote">“Your kindness makes their world brighter.” 🌿</p>
+        </div>
+
+        <!-- RHS - Offline Donation Form -->
+        <div class="donation-form-wrapper offline-form">
+            <h2>Fill Your Donation Details 💖</h2>
+
+            <form method="POST" class="donation-form">
+                {% csrf_token %}
+                <label for="name">Your Name</label>
+                <input type="text" name="name" placeholder="Full Name" value="{{ name }}" readonly>
+
+                <label for="contact">Contact</label>
+                <input type="text" name="contact" placeholder="Email / Phone" value="{{ contact }}" readonly>
+
+                <label for="item">What would you like to donate?</label>
+                <select name="item" id="donation-item" required>
+                    <option value="">Select</option>
+                    <option value="food">Pet Food</option>
+                    <option value="medicine">Medicine</option>
+                    <option value="blanket">Blankets / Clothes</option>
+                    <option value="toys">Toys</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <!-- Medicine-specific checkbox (hidden by default) -->
+                <div class="medicine-check" id="medicine-checkbox" style="display:none;">
+                    <label>
+                        <input type="checkbox" name="expiry_confirm">
+                        I confirm the medicine is not expired 
+                    </label>
+                </div>
+
+                <label for="notes">Additional Notes</label>
+                <textarea name="notes" placeholder="Any special instructions?"></textarea>
+
+                <button type="submit" class="donate-btn">Submit Offline Donation</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Function to show/hide checkbox
+    function showMedicineCheckbox(value) {
+        const checkboxDiv = document.getElementById('medicine-checkbox');
+        if (value === 'medicine') {
+            checkboxDiv.style.display = 'block';
+        } else {
+            checkboxDiv.style.display = 'none';
+        }
+    }
+
+    // Bind onchange event
+    const donationSelect = document.getElementById('donation-item');
+    donationSelect.addEventListener('change', function() {
+        showMedicineCheckbox(this.value);
+    });
+
+    // Run on page load in case "Medicine" is preselected
+    window.addEventListener('DOMContentLoaded', () => {
+        showMedicineCheckbox(donationSelect.value);
+    });
+</script>
+{% endblock %}

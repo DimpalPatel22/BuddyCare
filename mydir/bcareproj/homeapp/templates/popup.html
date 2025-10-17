@@ -1,0 +1,20 @@
+<!-- Rescue Now Popup -->
+<div class="popup-overlay" id="rescuePopup">
+    <div class="popup-box">
+        <span class="close-btn" id="closePopup">&times;</span>
+        <h2>🐾 Rescue Now</h2>
+        <p>Your quick action can give an animal a second chance at life</p>
+        
+        <div class="popup-buttons">
+            <!-- Continue as Guest -->
+            <a href="{% url 'rescue_form' %}">
+                <button type="button">Continue as Guest</button>
+            </a>
+
+            <!-- Login first, then redirect -->
+            <a href="{% url 'login' %}?next={% url 'rescue_form' %}">
+                <button type="button">Login/Already have account</button>
+            </a>
+        </div>
+    </div>
+</div>

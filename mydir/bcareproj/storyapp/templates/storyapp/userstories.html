@@ -1,0 +1,11 @@
+{% load static %}
+{% for story in stories %}
+<div class="user-story-box">
+    <h4>Name: {{ story.storyteller }}</h4>
+    <h3>{{ story.title }}</h3>
+    <p>{{ story.content }}</p>
+    <hr>
+</div>
+{% empty %}
+<p>No approved user stories yet.</p>
+{% endfor %}

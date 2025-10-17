@@ -1,0 +1,110 @@
+/* General Section Styling */
+.share-tips-hero {
+  background: linear-gradient(135deg, #fef6e4, #f9f9f9);
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom: 2px solid #eee;
+}
+
+.share-tips-hero h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.share-tips-hero p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Form Section */
+.share-tips-form {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 25px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Input Groups */
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #ff914d;
+  outline: none;
+  box-shadow: 0 0 4px rgba(255, 145, 77, 0.4);
+}
+
+/* Button */
+.cta-btn {
+  background: #ff914d;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  width: 100%;
+}
+
+.cta-btn:hover {
+  background: #e67c3d;
+}
+.success-box {
+  background: #e6ffed;
+  border: 1px solid #2ecc71;
+  color: #2d7a46;
+  padding: 12px 15px;
+  margin: 15px 0;
+  border-radius: 8px;
+  font-weight: 500;
+  text-align: center;
+}
+/* Wrapper for Learn Page button */
+.go-learn-btn {
+  text-align: center;   /* Center the button */
+  margin-top: 20px;     /* Space above the button */
+}
+
+.go-learn-btn .cta-btn {
+  background: #4CAF50;      /* Green color for variety */
+  color: #fff;
+  padding: 12px 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  text-decoration: none;    /* Remove underline */
+  display: inline-block;
+  transition: 0.2s ease;
+}
+
+.go-learn-btn .cta-btn:hover {
+  background: #45a049;      /* Slightly darker green on hover */
+  color: #fff;
+}

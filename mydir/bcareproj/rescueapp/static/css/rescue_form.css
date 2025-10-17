@@ -1,0 +1,85 @@
+.rescue-form-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.rescue-form-container h2 {
+    font-size: 28px;
+    color: #27ae60;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.rescue-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Each field as card */
+.rescue-form label {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.rescue-form input[type="text"],
+.rescue-form select,
+.rescue-form textarea,
+.rescue-form input[type="file"] {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    outline: none;
+    transition: all 0.2s;
+    font-size: 15px;
+}
+
+.rescue-form input:focus,
+.rescue-form select:focus,
+.rescue-form textarea:focus {
+    border-color: #27ae60;
+    box-shadow: 0 2px 6px rgba(39, 174, 96, 0.2);
+}
+
+/* Submit button fun and minimal */
+.rescue-form button {
+    padding: 14px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.rescue-form button:hover {
+    background-color: #2ecc71;
+    transform: scale(1.02);
+}
+
+/* Optional small note under input */
+.rescue-form small {
+    color: #666;
+    font-size: 12px;
+}
+.back-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 14px;
+    background-color: #f1f1f1;
+    color: #27ae60;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.back-link:hover {
+    background-color: #000c05;
+    color: #219150;
+}

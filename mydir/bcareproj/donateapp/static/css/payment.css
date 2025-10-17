@@ -1,0 +1,143 @@
+.payment-hero {
+  background: linear-gradient(135deg, #0078d7, #00a2ff);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.payment-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.donation-summary {
+  background: #f7faff;
+  border: 2px solid #0078d7;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.donation-summary h2 {
+  margin-bottom: 10px;
+  color: #0078d7;
+}
+
+.highlight {
+  color: #e91e63;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.payment-box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.591);
+}
+
+.method {
+  margin-bottom: 15px;
+}
+
+.method-header {
+  background: #f2f6fc;
+  padding: 15px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.3s;
+}
+
+.method-header:hover {
+  background: #e0ebff;
+}
+
+.method-body {
+  display: none;
+  padding: 15px;
+  border: 1px solid #dce6f9;
+  border-radius: 8px;
+  margin-top: 8px;
+  background: #fafbff;
+}
+
+.method-body form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.method-body input {
+  padding: 10px;
+  border: 1px solid #ccd5eb;
+  border-radius: 6px;
+}
+
+.pay-btn {
+  background: #0078d7;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pay-btn:hover {
+  background: #005bb5;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+}
+
+.upi-icons img,
+.card-icons img {
+  width: 45px;
+  margin: 5px;
+}
+
+.secure-footer {
+  text-align: center;
+  margin-top: 6px;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+.otp-modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+.otp-modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+.close-btn {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}

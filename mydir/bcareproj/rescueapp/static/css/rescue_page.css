@@ -1,0 +1,228 @@
+.rescue-hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 20px;
+    background: linear-gradient(to right, #e0f7fa, #ffffff);
+    border-radius: 12px;
+    margin-bottom: 40px;
+}
+.hero-image {
+    flex: 1 1 400px;
+    text-align: center;
+}
+.hero-image img {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+.rescue-instructions {
+    padding: 50px 20px;
+    background: #f1f8e9;
+    border-radius: 12px;
+    margin-bottom: 40px;
+}
+
+.rescue-instructions h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #27ae60;
+    margin-bottom: 40px;
+}
+
+.instructions-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.instruction {
+    flex: 1 1 250px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.instruction:hover {
+    transform: translateY(-10px);
+}
+
+.instruction img {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.instruction h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #2e7d32;
+}
+
+.instruction p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Rescue Tips Section */
+.rescuetips {
+  max-width: 950px;
+  margin: 60px auto;
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.rescuetips h2 {
+  text-align: left;
+  font-size: 2rem;
+  color: #27ae60;
+  margin-bottom: 10px;
+}
+
+.rescuetips .introtext {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  border-left: 4px solid #27ae60;
+  padding-left: 12px;
+}
+
+/* Tips container */
+.tipscontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Each tip */
+.tip {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+/* Icon style */
+.icon img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+/* Content */
+.content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.content p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+.tip:hover h3 {
+  color: #27ae60;
+  transition: color 0.3s ease;
+}
+
+/* Fun Facts Section */
+.fun-facts {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.fun-facts h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #27ae5f;
+    margin-bottom: 40px;
+    font-family: 'Segoe UI', sans-serif;
+}
+.fun-icon {
+    width: 60px;       
+    height: 50px;
+    object-fit: contain;
+}
+
+/* Fact item flex layout */
+.fact-item {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+
+/* Reverse layout for alternating items */
+.fact-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.fact-text {
+    flex: 1;
+}
+
+.fact-text h3 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.fact-text p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #555;
+}
+
+.fact-image {
+    flex: 1;
+}
+
+.fact-image img {
+    width: 70%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Floating Rescue CTA Section */
+.rescue-cta {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #ffe0b2 0%, #ffffff 100%); /* soft orange gradient */
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  margin: 60px 0;
+}
+
+
+.rescue-cta h2 {
+  font-size: 2.2rem;
+  color: #ff7043; /* coral/orange heading */
+  margin-bottom: 12px;
+}
+
+.rescue-cta .cta-button {
+  display: inline-block;
+  background: #ff5722; /* deep coral/orange button */
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 50px;  
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.rescue-cta .cta-button:hover {
+  background: #e64a19; /* darker shade on hover */
+  transform: scale(1.1);
+}

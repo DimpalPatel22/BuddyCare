@@ -1,0 +1,34 @@
+/* generalstories.css */
+.story-box {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  gap: 20px;
+}
+
+.story-box.reverse {
+  flex-direction: row-reverse;
+}
+
+.story-text {
+  flex: 1;
+}
+
+.story-image {
+  flex: 1;
+}
+
+.story-image img {
+  width: 90%;          
+  height: 350px;        
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.profile-pic {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.315);
+  margin-bottom: 10px;
+}

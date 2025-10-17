@@ -1,0 +1,445 @@
+.hero-adopt {
+    width: 100%;
+    height: 500px;                 
+    background-image: url('../images/adopthero.jpg');
+    background-size: cover;        
+    background-position: center;  
+    display: flex;
+    align-items: center;          
+    justify-content: center;     
+    text-align: center;
+    color: white;
+}
+
+.hero-adopt h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero-adopt p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.btn-adopt {
+    padding: 12px 25px;
+    background-color: #27ae5f;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+/*introduction*/
+.intro-adopt {
+    max-width: 900px;       
+    margin: 40px auto;     
+    padding: 0 20px;
+    text-align: center;
+    color: #333333c9;
+    line-height: 1.6;
+}
+
+/*adopting*/
+
+.adopt-tabs-wrapper input[type="radio"] {
+    display: none;
+}
+
+/* Tabs */
+.adopt-tabs {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    margin-bottom: 15px;
+    background-color: #f2f2f2;
+    padding: 12px;
+}
+
+.adopt-tabs label {
+    padding: 10px 20px;
+    background: #f2f2f2;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.adopt-tabs label:hover {
+    background: #d8e1da;
+    color: #fff;
+}
+
+/* Active tab styling */
+#adopt-dogs:checked ~ .adopt-tabs label[for="adopt-dogs"],
+#adopt-cats:checked ~ .adopt-tabs label[for="adopt-cats"],
+#adopt-street:checked ~ .adopt-tabs label[for="adopt-street"],
+#adopt-birds:checked ~ .adopt-tabs label[for="adopt-birds"] {
+    background: #939c98;
+    color: #fff;
+}
+
+
+.tab-pane {
+    display: none; 
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 15px; 
+    background: #eaf1f8; 
+    border-radius: 10px;
+}
+
+/* Show pane based on radio selection */
+#adopt-dogs:checked ~ .tab-content #dogs,
+#adopt-cats:checked ~ .tab-content #cats,
+#adopt-street:checked ~ .tab-content #street,
+#adopt-birds:checked ~ .tab-content #birds {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+/* Vertical Pet Box */
+.pet-box {
+    display: flex;
+    flex-direction: column;   
+    align-items: center;      
+    width: 220px;             
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 12px;
+    text-align: center;
+    transition: transform 0.2s;
+    margin: 10px;
+}
+
+.pet-box:hover {
+    transform: translateY(-5px);
+}
+
+/* Pet Image */
+.pet-box img {
+    width: 100%;
+    height: 150px;            
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;      
+}
+
+/* Pet Info */
+.pet-box h3 {
+    margin: 5px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.pet-box p {
+    color: #555;
+    margin: 3px 0;
+}
+
+.pet-box p strong {
+    display: inline-block;
+    width: 80px;
+    text-align: left;
+}
+
+/* Adopt Button */
+.btn-adopt-now {
+    margin-top: 8px;
+    padding: 8px 15px;
+    background: #27ae5f;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+}
+/* Adoption Process Section */
+.adopt-process {
+    background: #f9f9f9;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.adopt-process h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+    color: #27ae5f;
+}
+
+.steps-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.step-box {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 20px;
+    width: 220px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.step-box:hover {
+    transform: translateY(-5px);
+}
+
+/* Step Image */
+.step-box img {
+    width: 140px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.step-box h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.step-box p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+/* Success Wall Section */
+.adopt-success-wall {
+    background: #f8fdfb;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.adopt-success-wall h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #27ae5f;
+}
+
+.adopt-success-wall p {
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Carousel Container */
+.success-carousel {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Track */
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Slide */
+.slide {
+    min-width: 100%;
+    position: relative;
+    display: none; /* hide all initially */
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Caption */
+.caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    max-width: 70%;
+    text-align: left;
+}
+
+.caption h3 {
+    margin: 0 0 6px;
+    font-size: 20px;
+    color: #ffed9a;
+}
+
+.caption p {
+    font-size: 15px;
+    line-height: 1.4;
+    color: white;
+}
+
+/* Navigation Buttons */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(39,174,95,0.8);
+    border: none;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    transition: background 0.3s;
+}
+
+.carousel-btn:hover {
+    background: rgba(39,174,95,1);
+}
+
+.carousel-btn.prev {
+    left: 15px;
+}
+
+.carousel-btn.next {
+    right: 15px;
+}
+.pet-tips {
+    text-align: center;
+    padding: 40px;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #e3f2fd, #6da09b);
+}
+.pet-tips h2 {
+    font-size: 28px;
+    color: #2e7d32; 
+    margin-bottom: 25px;
+}
+.tip-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.tip-card {
+    width: 220px;
+    height: 160px;
+    perspective: 1000px;
+    cursor: pointer;
+    position:relative;
+}
+
+.tip-front, .tip-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    padding: 15px;
+    font-weight: bold;
+    transition: transform 0.7s ease-in-out;
+}
+
+.tip-front {
+    background:  #ffffff;;
+    border: 2px solid #80cbc4;
+    color: #333;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.tip-back {
+    background: linear-gradient(135deg, #43a047, #66bb6a);;
+    color: #fff;
+    transform: rotateY(180deg);
+}
+
+.tip-card:hover .tip-front {
+    transform: rotateY(45deg);
+}
+
+.tip-card:hover .tip-back {
+    transform: rotateY(360deg);
+}
+/*Myth Part*/
+.myth-fact {
+    padding: 60px 20px;
+    background: #fdfdfd;
+    font-family: "Poppins", sans-serif;
+    max-width: 900px;
+    margin: auto;
+}
+
+.myth-fact h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.myth-fact .subtitle {
+    text-align: center;
+    font-size: 15px;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.myth-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.myth-row {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    background: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.myth {
+    flex: 1;
+    color: #c0392b;
+    font-weight: 600;
+}
+
+.fact {
+    flex: 1;
+    color: #2e7d32;
+    font-weight: 500;
+}
+.adopt-final-cta {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.adopt-final-cta h2 {
+    color: #27ae60;
+    margin-bottom: 10px;
+}
+
+.adopt-final-cta p {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.adopt-final-cta .btn-adopt {
+    background-color: #27ae60;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+}

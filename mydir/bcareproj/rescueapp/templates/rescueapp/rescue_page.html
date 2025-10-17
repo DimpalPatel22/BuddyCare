@@ -1,0 +1,230 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block mycontent %}
+<link rel="stylesheet" href="{% static 'css/rescue_page.css' %}">
+
+<!--Hero section-->
+<section class="rescue-hero">
+    <div class="hero-text" style="flex:1 1 500px;padding: 20px;">
+        <h1 style="color: #27ae60;margin-bottom: 20px;">🐾 Rescue Animals & Birds</h1>
+        <p>Every paw, wing, and heart matters! Join us in saving lives in your area.</p>
+        <p>"Saving one animal won’t change the world, but it will change the world for that one animal."</p>
+        <p>Even superheroes need volunteers </p>
+
+        {% if user.is_authenticated %}
+        <a href="{% url 'rescue_list' %}" >See Rescue Requests</a>
+        {% else %}
+        <a href="{% url 'login' %}?next={% url 'rescue_list' %}" >Login to See Rescue Requests</a>
+        {% endif %}
+
+    </div>
+    <div class="hero-image">
+        <img src="{% static 'images/banner.jpg' %}" alt="Rescue Animals">
+    </div>
+</section>
+
+<!--2nd section rescue information-->
+<section class="rescue-instructions">
+    <h2>How to Rescue</h2>
+    <div class="instructions-container">
+        <div class="instruction">
+            <img src="{% static 'images/step1.png' %}" alt="Identify Animal">
+            <h3>Step 1: Identify</h3>
+            <p>Notice an injured or abandoned animal. Ensure your safety first.</p>
+        </div>
+        <div class="instruction">
+            <img src="{% static 'images/step2.jpg' %}" alt="Report">
+            <h3>Step 2: Report</h3>
+            <p>Use our platform to submit details: location, condition, and photos.</p>
+        </div>
+        <div class="instruction">
+            <img src="{% static 'images/step3.jpg' %}" alt="Help">
+            <h3>Step 3: Assistance</h3>
+            <p>Volunteers or local vets will guide you to safely help the animal.</p>
+        </div>
+        <div class="instruction">
+            <img src="{% static 'images/step4.webp' %}" alt="Rescue Complete">
+            <h3>Step 4: Rescue Complete</h3>
+            <p>The animal is cared for or prepared for adoption. You just became a hero!</p>
+        </div>
+    </div>
+</section>
+
+<!--3rd section tip-->
+<section class="rescuetips">
+  <h2>When Volunteers Arrive – What You Should Do</h2>
+  <p class="introtext">
+    Volunteers may take a few minutes to reach. Meanwhile, stay calm and follow these simple steps  
+    based on the animal’s condition. Your quick action can save lives. 
+  </p>
+  <div class="tipscontainer">
+    <div class="tip">
+      <div class="icon">
+        <img src="https://img.icons8.com/color/96/dove.png" alt="Bird Bleeding Icon">
+      </div>
+      <div class="content">
+        <h3>If a Bird is Bleeding</h3>
+        <p>
+          Cover the bird gently with a clean cloth to prevent it from flapping. 
+          Avoid pressing directly on the wound — just keep it calm until help takes over.
+        </p>
+      </div>
+    </div>
+
+    <div class="tip">
+      <div class="icon">
+        <img src="https://img.icons8.com/color/96/dog.png" alt="Street Dog Icon">
+      </div>
+      <div class="content">
+        <h3>Street Dog in Pain</h3>
+        <p>
+          Don’t try to lift or drag the dog yourself. Instead, provide water nearby 
+          and guide volunteers by pointing out the exact spot of injury. 
+          Respect their space until rescuers handle it.
+        </p>
+      </div>
+    </div>
+
+    <div class="tip">
+      <div class="icon">
+        <img src="https://img.icons8.com/?size=100&id=QxzNh2LpBXVI&format=png&color=000000" alt="Abandoned Pet Icon">
+      </div>
+      <div class="content">
+        <h3>If You Find an Abandoned Pet</h3>
+        <p>
+          Keep them in a safe corner away from traffic, 
+          offer some food or water, and share important details with rescuers 
+          (like their behavior or visible injuries).
+        </p>
+      </div>
+    </div>
+
+    <div class="tip">
+      <div class="icon">
+        <img src="https://img.icons8.com/?size=100&id=9Vq1R4Ls9zI2&format=png&color=000000" alt="Unique Case Icon">
+      </div>
+      <div class="content">
+        <h3>Unique Cases</h3>
+        <p>
+          Sometimes, goats get trapped in wires or kittens hide inside car engines. 
+          In such cases, never try forceful removal. Wait for volunteers, 
+          guide them clearly, and keep curious bystanders at a safe distance.
+        </p>
+      </div>
+    </div>
+    <div class="tip">
+      <div class="icon">
+        <img src="https://img.icons8.com/?size=100&id=zOoA9kbGQM3w&format=png&color=000000" alt="Sparrow Care Icon">
+      </div>
+      <div class="content">
+        <h3>If a Sparrow Falls</h3>
+        <p>
+          Sometimes sparrows fall while flying or from trees. Never pour water directly into its beak — it can choke and die.  
+          Instead, use a small spoon, dropper, or wet your finger to let the bird sip slowly.  
+          Place it in a quiet, shaded spot and wait for volunteers to help.
+        </p>
+      </div>
+    </div>
+    <div class="tip">
+         <div class="icon">
+        <img src="https://img.icons8.com/color/96/earth-care.png">
+    </div>
+    <div class="content">
+        <h3>Stay Calm & Call for Guidance</h3>
+        <p>Whether it’s a bird, dog, cat, or even a tiny squirrel — treat them gently,  
+            speak softly, and give them space to feel safe.  
+            Sometimes, the best medicine you can offer is kindness and patience.   
+            Remember: <em>every little act of care makes the world brighter.</em>
+        </p>
+    </div>
+    </div>
+
+  </div>
+</section>
+
+<!--4th section funfact-->
+<section class="fun-facts">
+    <h2>
+        Did You Know?
+        <img src="{% static 'images/brain.png' %}" class="fun-icon">
+    </h2>
+
+    <!-- Fact 1 -->
+    <article class="fact-item">
+        <div class="fact-text">
+            <h3>Dogs Taste Love, Not Just Food</h3>
+            <p>
+                Dogs have about 1,700 taste buds, fewer than humans, but they are surprisingly sensitive to flavors and even emotions.  
+                Studies show that when dogs eat, they respond not just to the food but also to the care and attention they receive.  
+                A gentle pat or kind voice can make their meal feel more enjoyable than the food itself!
+            </p>
+        </div>
+        <div class="fact-image">
+            <img src="{% static 'images/dogfact.jpg' %}" alt="Dog">
+        </div>
+    </article>
+
+    <!-- Fact 2 -->
+    <article class="fact-item reverse">
+        <div class="fact-text">
+            <h3>Pigeons Are Tiny Thinkers</h3>
+            <p>
+                On a sunny city corner, a pigeon stared at its reflection for minutes. 
+                Pigeons can recognize themselves in mirrors and even remember faces. 
+                They might be thinking about food, friends, or the next clever move. 
+                Next time you see a pigeon cooing, smile—they might just be watching you too!
+            </p>
+        </div>
+        <div class="fact-image">
+            <img src="{% static 'images/pigeonfact.jpg' %}" alt="Pigeon">
+        </div>
+    </article>
+
+    <!-- Fact 3 -->
+    <article class="fact-item">
+        <div class="fact-text">
+            <h3>Cows Have Best Friends</h3>
+            <p>
+                Daisy the cow refused to eat until her best friend Bessie joined her. 
+                Cows form strong bonds and feel sad when separated. 
+                When reunited, they nuzzle each other happily. 
+                Even on a farm, friendship matters. These gentle giants teach us how to care for friends every day.
+            </p>
+        </div>
+        <div class="fact-image">
+            <img src="{% static 'images/cowfact.jpg' %}" alt="Cow">
+        </div>
+    </article>
+
+    <!-- Fact 4 -->
+    <article class="fact-item reverse">
+        <div class="fact-text">
+            <h3>Little Goats, Big Hearts</h3>
+            <p>
+                A young boy rescued a tiny goat that had been separated from its mother. 
+                Goats are curious and playful creatures, full of energy and affection. 
+                Little things like a gentle pat or a warm hug make them feel safe. 
+                That little goat now follows the boy everywhere, proving that even the tiniest animals can form strong bonds with humans.
+            </p>
+        </div>
+        <div class="fact-image">
+            <img src="{% static 'images/goatfact.jpg' %}" alt="Goat">
+        </div>
+    </article>
+</section>
+<!--5th final section-->
+<!-- Final CTA Section -->
+<section class="rescue-cta">
+  <div class="cta-content">
+    <h2>Be a Hero Today</h2>
+    <p>
+      Every rescue counts — not just for the animal, but for you too.  
+      Join the mission, report a rescue, and earn your <strong>Rescue Badges</strong>.  
+      From “First Rescuer” to “Animal and Bird Guardian”  — every step brings you closer to becoming a true hero.
+    </p>
+    <a href="{% url 'rescue_form' %}" class="cta-button">🚨 Rescue Now</a>
+    <p>Your act of kindness may save a life today </p>
+  </div>
+</section>
+
+{% endblock %}

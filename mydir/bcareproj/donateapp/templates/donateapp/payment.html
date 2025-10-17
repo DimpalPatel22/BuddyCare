@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block mycontent %}
+<link rel="stylesheet" href="{% static 'css/payment.css' %}">
+
+<section class="payment-hero" id="payment">
+  <div class="hero-inner">
+    <h1>Complete Your Donation</h1>
+    <p>Every contribution makes a difference for paws, wings & hearts</p>
+  </div>
+</section>
+
+<div class="payment-container">
+  <!-- Donation Summary -->
+  <div class="donation-summary">
+    <h2>Donation Summary</h2>
+    <p><strong>Name:</strong> {{ name }}</p>
+    <p><strong>Amount:</strong> <span class="highlight">₹{{ amount }}</span></p>
+  </div>
+
+  <!-- Payment Options -->
+  <div class="payment-box">
+    <h2>Select Payment Method</h2>
+
+    <!-- UPI -->
+    <div class="method">
+      <button class="method-header" onclick="toggleMethod('upi-box')">
+        <img src="{% static 'images/upi.png' %}" alt="UPI" class="icon"> Pay with UPI
+      </button>
+      <div id="upi-box" class="method-body">
+        <form id="upi-form" method="post" action="{% url 'process_payment' %}" onsubmit="generateOtp(event, 'UPI')">
+          {% csrf_token %}
+          <label>Enter UPI ID</label>
+          <input type="text" name="upi_id" id="upi_id" autocomplete="off" required>
+          <button type="submit" class="pay-btn">Pay ₹{{ amount }} Now</button>
+        </form>
+        <div class="upi-icons">
+          <img src="{% static 'images/gpay.png' %}">
+          <img src="{% static 'images/phonepay.png' %}">
+          <img src="{% static 'images/paytm.png' %}">
+        </div>
+      </div>
+    </div>
+
+    <!-- Card -->
+    <div class="method">
+      <button class="method-header" onclick="toggleMethod('card-box')">
+        <img src="{% static 'images/creditcard.png' %}" alt="Card" class="icon"> Credit/Debit Card
+      </button>
+      <div id="card-box" class="method-body">
+        <form id="card-form" method="post" action="{% url 'process_payment' %}" onsubmit="generateOtp(event, 'Card')">
+          {% csrf_token %}
+          <label>Card Number</label>
+          <input type="text" name="card_number" maxlength="16" id="card_number" autocomplete="off" required>
+
+          <label>Expiry</label>
+          <input type="text" name="expiry" maxlength="5" id="expiry" autocomplete="off" required>
+
+          <label>CVV</label>
+          <input type="password" name="cvv" maxlength="3" id="cvv" autocomplete="off" required>
+
+          <button type="submit" class="pay-btn">Pay ₹{{ amount }} Securely</button>
+        </form>
+        <div class="card-icons">
+          <img src="{% static 'images/visa.png' %}" alt="Visa">
+          <img src="{% static 'images/mastercard.png' %}" alt="MasterCard">
+          <img src="{% static 'images/rupay.png' %}" alt="RuPay">
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- OTP Modal -->
+<div id="otpModal" class="otp-modal" style="display:none;">
+  <div class="otp-modal-content">
+    <span class="close-btn" onclick="closeOtp()">&times;</span>
+    <h3>Your OTP is: <span id="generatedOtp"></span></h3>
+    <p>Enter the OTP to complete your donation</p>
+    <form id="otp-form" method="post" action="{% url 'process_payment' %}">
+      {% csrf_token %}
+      <input type="hidden" name="name" value="{{ name }}">
+      <input type="hidden" name="amount" value="{{ amount }}">
+      <input type="hidden" name="method" id="otp-method" value="">
+      <input type="text" name="otp" maxlength="4" placeholder="Enter OTP" required><br><br>
+      <button type="submit" class="pay-btn">Verify & Complete Payment</button>
+    </form>
+  </div>
+</div>
+
+<!-- Security Note -->
+<div class="secure-footer">
+  🔒 100% Secure Payment | BuddyCare does not store your card/UPI details.
+</div>
+
+<script src="{% static 'js/payment.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,132 @@
+{% load static %}
+
+<div class="tab-pane" id="dogs">
+    <div class="pet-box">
+        <img src="{% static 'images/adopt1.jpg' %}" alt="Brownie">
+        <h3>Brownie</h3>
+        <p><strong>Breed:</strong> Labrador</p>
+        <p><strong>Age:</strong> Small Baby</p>
+        <p><strong>Personality:</strong> Friendly, playful, loves kids.</p>
+        <a href="{% url 'adopt_form' %}?pet=Brownie" class="btn-adopt-now">Adopt Now</a>
+    </div>
+    <div class="pet-box">
+        <img src="{% static 'images/dog2.jpg' %}" alt="Packet">
+        <h3>Packet</h3>
+        <p><strong>Breed:</strong> Beagle</p>
+        <p><strong>Age:</strong> 1 yr</p>
+        <p><strong>Personality:</strong> Energetic, loves running and cuddles.</p>
+        <a href="{% url 'adopt_form' %}?pet=Packet" class="btn-adopt-now">Adopt Now</a>
+    </div>
+    <div class="pet-box">
+        <img src="{% static 'images/dog3.jpg' %}" alt="Rocky">
+        <h3>Rocky</h3>
+        <p><strong>Breed:</strong>German Shepherd</p>
+        <p><strong>Age:</strong>3 yrs</p>
+        <p><strong>Personality:</strong> Loyal, protective, intelligent.</p>
+        <a href="{% url 'adopt_form' %}?pet=Rocky" class="btn-adopt-now">Adopt Now</a>
+    </div>
+    <div class="pet-box">
+        <img src="{% static 'images/dog4.jpg' %}" alt="Lucy">
+        <h3>Lucy</h3>
+        <p><strong>Breed:</strong>Golden Retriever</p>
+        <p><strong>Age:</strong>8 months</p>
+        <p><strong>Personality:</strong> Gentle, loves water and kids.</p>
+        <a href="{% url 'adopt_form' %}?pet=Lucy" class="btn-adopt-now">Adopt Now</a>
+    </div>
+</div>
+
+<div class="tab-pane" id="cats">
+    <div class="pet-box">
+        <img src="{% static 'images/cat1.png' %}" alt="Mittens">
+        <h3>Mittens</h3>
+        <p><strong>Breed:</strong> Persian</p>
+        <p><strong>Age:</strong> 6 months</p>
+        <p><strong>Personality:</strong> Calm, enjoys lounging in sunny spots.</p>
+        <a href="{% url 'adopt_form' %}?pet=Mittens" class="btn-adopt-now">Adopt Now</a>
+    </div>
+    <div class="pet-box">
+        <img src="{% static 'images/cat2.jpg' %}" alt="Whiskers">
+        <h3>Whiskers</h3>
+        <p><strong>Breed:</strong> Bengal Cat</p>
+        <p><strong>Age:</strong> 1 yr</p>
+        <p><strong>Personality:</strong> Friendly, affectionate, loves company.</p>
+        <a href="{% url 'adopt_form' %}?pet=Whiskers" class="btn-adopt-now">Adopt Now</a>
+    </div>
+    <div class="pet-box">
+        <img src="{% static 'images/cat3.jpg' %}" alt="Chikki">
+        <h3>Chikki</h3>
+        <p><strong>Breed:</strong> Indian Shorthair</p>
+        <p><strong>Age:</strong> 2 yrs</p>
+        <p><strong>Personality:</strong> Playful, curious, loves chasing toys.</p>
+        <a href="{% url 'adopt_form' %}?pet=Chikki" class="btn-adopt-now">Adopt Now</a>
+    </div>
+    <div class="pet-box">
+        <img src="{% static 'images/cat4.jpg' %}" alt="Mithu">
+        <h3>Mithu</h3>
+        <p><strong>Breed:</strong> Street Cat</p>
+        <p><strong>Age:</strong> 1 year</p>
+        <p><strong>Personality:</strong> Gentle, loves food and cuddles.</p>
+        <a href="{% url 'adopt_form' %}?pet=Mitthu" class="btn-adopt-now">Adopt Now</a>
+    </div>
+</div>
+
+<div class="tab-pane" id="birds">
+    <div class="pet-box">
+        <img src="{% static 'images/bird1.jpg' %}" alt="Radha">
+        <h3>Radha</h3>
+        <p><strong>Species:</strong> Parrot</p>
+        <p><strong>Age:</strong> 2 yrs</p>
+        <p><strong>Personality:</strong> Talkative, loves interaction.</p>
+        <a href="{% url 'adopt_form' %}?pet=Radha" class="btn-adopt-now">Adopt Now</a>
+    </div>
+    <div class="pet-box">
+        <img src="{% static 'images/bird2.jpg' %}" alt="Sunny">
+        <h3>Sunny</h3>
+        <p><strong>Species:</strong> Cockatiel</p>
+        <p><strong>Age:</strong> 1 yr</p>
+        <p><strong>Personality:</strong> Playful, very friendly.</p>
+        <a href="{% url 'adopt_form' %}?pet=Sunny" class="btn-adopt-now">Adopt Now</a>
+    </div>
+    <div class="pet-box">
+        <img src="{% static 'images/bird3.jpg' %}" alt="Peachu">
+        <h3>Peachu</h3>
+        <p><strong>Species:</strong> Lovebird</p>
+        <p><strong>Age:</strong> 8 months</p>
+        <p><strong>Personality:</strong> Colorful, social, loves singing.</p>
+        <a href="{% url 'adopt_form' %}?pet=Peachu" class="btn-adopt-now">Adopt Now</a>
+</div>
+</div>
+
+<div class="tab-pane" id="street">
+    <div class="pet-box">
+        <img src="{% static 'images/street1.jpg' %}" alt="Chotu">
+        <h3>Chotu</h3>
+        <p><strong>Type:</strong> Street Dog</p>
+        <p><strong>Age:</strong> 10 week</p>
+        <p><strong>Personality:</strong> Playful, waiting for a loving home.</p>
+        <a href="{% url 'adopt_form' %}?pet=Chotu" class="btn-adopt-now">Adopt Now</a>
+    </div>
+    <div class="pet-box">
+        <img src="{% static 'images/street2.jpg' %}" alt="Bunny">
+        <h3>Bunny</h3>
+        <p><strong>Type:</strong> Rescued Rabbit</p>
+        <p><strong>Age:</strong> 7 months</p>
+        <p><strong>Personality:</strong> Gentle, loves carrots and cuddles.</p>
+        <a href="{% url 'adopt_form' %}?pet=Bunny" class="btn-adopt-now">Adopt Now</a>
+    </div>
+    <div class="pet-box">
+        <img src="{% static 'images/street3.jpg' %}" alt="Kaju">
+        <h3>Kaju</h3>
+        <p><strong>Type:</strong> Rescued Turtle</p>
+        <p><strong>Age:</strong> 3 yrs</p>
+        <p><strong>Personality:</strong> Slow but steady, peaceful companion.</p>
+        <a href="{% url 'adopt_form' %}?pet=Kaju" class="btn-adopt-now">Adopt Now</a>
+    </div>
+    <div class="pet-box">
+        <img src="{% static 'images/street4.jpg' %}" alt="Gauri">
+        <h3>Gauri</h3>
+        <p><strong>Type:</strong> Street Cat</p>
+        <p><strong>Age:</strong> 6 months</p>
+        <p><strong>Personality:</strong> Curious, enjoys human company.</p>
+        <a href="{% url 'adopt_form' %}?pet=Gauri" class="btn-adopt-now">Adopt Now</a>
+    </div>

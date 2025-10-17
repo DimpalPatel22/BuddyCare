@@ -1,0 +1,209 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block mycontent %}
+<link rel="stylesheet" href="{% static 'css/health.css' %}">
+
+<!-- Hero Section -->
+<section class="health-hero">
+  <!-- Left: Image -->
+  <div class="hero-image">
+    <img src="{% static 'images/mainhealth.jpg' %}" alt="Pet Health Awareness">
+  </div>
+
+  <!-- Right: Text -->
+  <div class="hero-text">
+    <h1>Protect Your Pet: Health & Disease Awareness</h1>
+    <p>Empowering you with knowledge to recognize, prevent, and act on common health issues for your pets.</p>
+  </div>
+</section>
+
+<!-- Disease & Health Awareness Section -->
+<section class="health-awareness">
+  <div class="health-container">
+    <h2>Common Health Concerns & Prevention</h2>
+    <p class="intro">
+      Understanding common diseases and health issues is the first step to keeping your pets safe and happy. 
+      BuddyCare is here to guide you in spotting early signs and preventing serious problems.
+    </p>
+
+    <!-- Dogs -->
+    <div class="animal-section-flex">
+      <div class="animal-text">
+        <h3>Dogs</h3>
+        <ul>
+          <li><strong>Fleas & Ticks:</strong> Check fur regularly, use vet-approved preventatives.</li><br>
+          <li><strong>Parvovirus:</strong> Ensure vaccinations are up to date; watch for vomiting or diarrhea.</li><br>
+          <li><strong>Obesity:</strong> Feed balanced meals and provide daily exercise.</li><br>
+          <li><strong>Dental Issues:</strong> Brush teeth regularly and provide chew toys.</li>
+        </ul>
+      </div>
+      <div class="animal-image">
+        <img src="{% static 'images/disease1.jpg' %}">
+      </div>
+    </div>
+
+    <!-- Cats -->
+    <div class="animal-section-flex">
+      <div class="animal-text">
+        <h3>Cats</h3>
+        <ul>
+          <li><strong>Feline Upper Respiratory Infection:</strong> Keep vaccinations current; maintain hygiene.</li><br>
+          <li><strong>Fleas:</strong> Check fur and use safe preventatives.</li><br>
+          <li><strong>Urinary Issues:</strong> Provide clean water; monitor litter box habits.</li><br>
+          <li><strong>Obesity:</strong> Control portions and encourage play.</li>
+        </ul>
+      </div>
+      <div class="animal-image">
+        <img src="{% static 'images/disease2.jpg' %}" alt="Cats Health">
+      </div>
+    </div>
+
+    <!-- Birds -->
+    <div class="animal-section-flex">
+      <div class="animal-text">
+        <h3>Birds </h3>
+        <ul>
+          <li><strong>Feather Plucking:</strong> Ensure mental stimulation and <br>proper social interaction; provide toys and perches.</li><br>
+          <li><strong>Beak Deformities:</strong> Provide appropriate chew toys and cuttlebone;<br> ensure a balanced diet rich in nutrients.</li><br>
+          <li><strong>Eye Infections:</strong> Maintain cage hygiene; <br>avoid exposure to drafts and dusty environments.</li><br>
+          <li><strong>Bumblefoot:</strong> Keep perches soft and clean; avoid hard surfaces.</li>
+        </ul>
+      </div>
+      <div class="animal-image">
+        <img src="{% static 'images/disease3.jpeg' %}" alt="Birds Health">
+      </div>
+    </div>
+
+    <!-- Health Resources Two-Column Section -->
+     <section class="health-resource-columns">
+        <div class="resource-columns-container">
+            <div class="resource-column">
+                <h2>🩺 Contact BuddyCare Volunteers</h2>
+                <p>Contact our Buddycare volunteer and inform all information about your pets</p>
+                <a href="{%url 'volunteer' %}#contact" class="cta-btn">Contact Buddycare Volunteers</a>
+            </div>
+
+    <!-- Right Column: General Health -->
+            <div class="resource-column">
+                <h2>🐾 Pet Allergies</h2>
+                <p>Learn about common allergies in pets and how to spot early signs. Sneezes, itchiness, or stomach troubles? Know what to do!</p>
+                <a href="https://my.clevelandclinic.org/health/diseases/17702-pet-allergies" target="_blank" class="cta-btn">Visit PetMD Health</a>
+            </div>
+        </div>
+    </section>
+    </div>
+</section>
+
+<!-- Pet First Aid / Emergency Tips -->
+<section class="first-aid">
+  <div class="first-aid-container">
+    <h2>Pet First Aid & Emergency Tips 🐾</h2>
+    <p class="intro">
+      Quick actions can make all the difference! Here are some simple steps you can follow to keep your pets safe in common emergencies.
+    </p>
+
+    <div class="tips-cards">
+
+      <div class="tip-card">
+        <img src="{% static 'images/teat1.jpeg' %}" class="tip-icon">
+        <h3>Stop Bleeding</h3>
+        <p>Apply a clean cloth or bandage to the wound. Keep your pet calm and still.</p>
+      </div>
+
+      <div class="tip-card">
+        <img src="{% static 'images/treat2.jpg' %}" class="tip-icon">
+        <h3>Choking</h3>
+        <p>Check the airway carefully. If something is stuck, try gentle removal or contact your vet immediately.</p>
+      </div>
+
+      <div class="tip-card">
+        <img src="{% static 'images/treat3.png' %}" class="tip-icon">
+        <h3>Heatstroke</h3>
+        <p>Move your pet to a shaded area, offer cool water, and wet their body. Contact a vet if symptoms persist.</p>
+      </div>
+
+      <div class="tip-card">
+        <img src="{% static 'images/treat4.jpg' %}" class="tip-icon">
+        <h3>Poisoning</h3>
+        <p>Do not induce vomiting. Call your vet immediately and provide details of what your pet ingested.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Home Remedies Section -->
+<section class="home-remedies">
+  <div class="remedies-container">
+    <h2>Home Remedies for Minor Pet & Street Animal Issues 🏡</h2>
+    <p class="intro">
+      For minor sicknesses or discomfort, these simple home remedies can help your pets and injured street animals recover safely. 
+      Always monitor them closely and contact a vet if symptoms persist or worsen.
+    </p>
+
+    <!-- Remedies for Dogs -->
+    <div class="remedy-animal">
+      <h3>Dogs</h3>
+      <ul>
+        <li><strong>Upset Stomach:</strong> Offer boiled rice and chicken; keep water available.</li>
+        <li><strong>Mild Cold:</strong> Keep warm, give steam exposure for 10 min, maintain hydration.</li>
+        <li><strong>Minor Cuts:</strong> Clean with boiled water, apply antiseptic cream.</li>
+      </ul>
+    </div>
+
+    <!-- Remedies for Cats -->
+    <div class="remedy-animal">
+      <h3>Cats</h3>
+      <ul>
+        <li><strong>Hairball:</strong> Offer small amount of olive oil or commercial hairball paste.</li>
+        <li><strong>Mild Cold:</strong> Keep warm, maintain clean bedding, steam exposure if possible.</li>
+        <li><strong>Minor Cuts:</strong> Clean with boiled water, keep area dry and monitor.</li>
+      </ul>
+    </div>
+
+    <!-- Remedies for Birds -->
+    <div class="remedy-animal">
+      <h3>Birds</h3>
+      <ul>
+        <li><strong>Mild Weakness:</strong> Offer sugar water or soaked seeds to boost energy.</li>
+        <li><strong>Feather Plucking Stress:</strong> Provide quiet environment, offer toys or perches.</li>
+        <li><strong>Minor Injuries:</strong> Clean gently with boiled water; avoid harsh handling.</li>
+      </ul>
+    </div>
+
+    <!-- Remedies for Injured Street Animals -->
+    <div class="remedy-animal">
+      <h3>Injured Street Animals</h3>
+      <ul>
+        <li><strong>Minor Cuts or Scrapes:</strong> Clean with boiled water, apply mild antiseptic if available.</li>
+        <li><strong>Dehydration:</strong> Offer clean water gradually.</li>
+        <li><strong>Exhaustion:</strong> Provide a safe, warm, quiet shelter for rest.</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Quick Awareness Tips -->
+<section class="health-tips-vertical">
+  <h2>Quick Health Tips 🩺</h2>
+  <div class="tips-list">
+    <span> Regular vet checkups prevent major illnesses.</span>
+    <span> Keep vaccinations up to date for your pets.</span>
+    <span> Balanced diet & clean water keep pets healthy.</span>
+    <span> Observe behavior changes — early signs matter.</span>
+    <span> Grooming regularly prevents skin & coat issues.</span>
+  </div>
+</section>
+
+<script>
+window.addEventListener("load", function() {
+    const hero = document.querySelector('.health-hero');
+    hero.classList.add('loaded'); // triggers fade-in automatically
+});
+</script>
+
+
+{% endblock %}

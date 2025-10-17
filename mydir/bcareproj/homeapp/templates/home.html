@@ -1,0 +1,178 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block mycontent %}
+<link rel="stylesheet" href="{% static 'css/style1.css' %}">
+<link rel="stylesheet" href="{% static 'css/rescue_popup.css' %}">
+
+<!--1)Hero section-->
+<div class="carousel">
+    <div class="slide slide1 active"></div>
+    <div class="slide slide2"></div>
+    <div class="slide slide3"></div>
+    <div class="herotext">
+    <h1>Dedicated to Saving Paws, Wings and Hearts</h1>
+    <p>Since 2025- For Voiceless</p>
+    <p>-A small act of kindness- a giant leap for animals and birds</p>
+</div>
+</div>
+
+<!--2nd CTA-->
+<div class="actionbox">
+    <a href="#" class="ctaitems rescue">Rescue Now</a>
+    <a class="ctaitems adopt" href="{% url 'adopt_page' %}">Adopt Pet</a>
+    <a class="ctaitems vet" href="{% url 'emergency' %}#map-section">Find Vet/Medicine</a>
+    <a class="ctaitems voluntter" href="{% url 'volunteer' %}">Become/Find Volunteer</a>
+</div>        
+{% include 'popup.html' %}
+
+<div class="introcard">
+    <div class="introimg" style="flex: 0 0 400px;">
+        <img src="{% static 'images/mainintro1.jpg' %}">
+    </div>
+    <div class="introinfo">
+        <h2>Welcome to BuddyCare🐾</h2>
+        <p>BuddyCare is an all-in-one platform dedicated to the welfare of animals and birds in India.<br> 
+        Our mission is to <br>1)Rescue injured and abandoned pets<br>2) Provide temporary care, connect them 
+        with loving adopters<br>3)Ensure access to trusted veterinary services.<br> 
+        We aim to raise awareness about responsible pet ownership, offer guidance to first-time 
+        pet owners, and support volunteers who tirelessly work to make a difference.<br>
+        Through our community forums, real-life stories, and educational resources, BuddyCare 
+        empowers everyone to contribute to a safer, happier world for voiceless creatures.
+    </p>
+    </div>
+</div>
+
+<!--3rd Real life stories-->
+<div class="reallifestories">
+    <h2 style="font-size: 30px;color: #27ae5f;margin-bottom: 30px;">Real life stories</h2>
+    <div class="storycontainer">
+        <a href="{% url 'stories' %}?story=puppy">
+            <div class="storybox">
+                <img src="{% static 'images/real1.jpg' %}">
+                <div class="story">
+                    <h3>Street Animal Challenges</h3>
+                    <p>A tiny puppy struggles to cross busy roads daily, barely surviving. Will anyone help him?</p>
+                </div>
+            </div>
+        </a>
+        <a href="{% url 'stories' %}?story=kitten">
+            <div class="storybox">
+                <img src="{% static 'images/real2.jpg' %}">
+                <div class="story">
+                    <h3>Adopted Pet Story</h3>
+                    <p>An abandoned kitten waits under the rain for days. Who will give her a home?</p>
+                </div>
+            </div>
+        </a>
+        <a href="{% url 'stories' %}?story=cow">
+            <div class="storybox">
+                <img src="{% static 'images/real3.jpg' %}">
+                <div class="story">
+                    <h3>Volnteer Highlight</h3>
+                    <p>A cow got stuck in a drain, and volunteers worked hard to pull her out—what happened next?</p>
+                </div>
+            </div>
+        </a>
+        <a href="{% url 'stories' %}?story=dogowner">
+            <div class="storybox">
+                <img src="{% static 'images/real4.png' %}">
+                <div class="story">
+                    <h3>Pet Owner Experiences</h3>
+                    <p>A first-time dog owner struggles to feed and care for a rescued pup. Will they manage?</p>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+
+<!--4th Success stories-->
+<div class="successstories">
+    <h2 style="font-size: 30px;color: #ae2727f1;margin-bottom: 30px;">Success stories</h2>
+    <div class="carousel2">
+        <div class="slidesuccess">
+            <img src="{% static 'images/success1.jpg' %}">
+            <div class="story">
+                <h3>Bruno the puppy</h3>
+                <p>I found Bruno abandoned on the street. BuddyCare guided me step by step, and now he’s safe and happy at home!</p>
+            </div>
+        </div>
+        <div class="slidesuccess"> 
+            <img src="{% static 'images/success2.jpg' %}">
+            <div class="story">
+                <h3>Mittens the kitten</h3>
+                <p>Mittens was abandoned, but BuddyCare helped me adopt her safely. She’s now part of our family!</p>
+            </div>
+        </div>
+        <div class="slidesuccess">        
+            <img src="{% static 'images/su3.jpg' %}">
+            <div class="story">
+                <h3>Radha the pigeon</h3>
+                <p>Radha was entangled in kite strings. Thanks to BuddyCare, she was rescued and released safely back into the wild.</p>
+            </div>
+        </div>
+        <div class="slidesuccess">
+            <img src="{% static 'images/s4.jpg' %}">
+            <div class="story">
+                <h3>Sunny - Our friend stray dog</h3>
+                <p>Sunny got injured on the road. BuddyCare’s guidance and vet network helped him recover fully. Forever grateful!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--5th News-->
+<section class="latest-news">
+    <h2>Latest Animal & Bird News</h2>
+    <div class="news-wrapper">
+
+        <!-- 1. Serious Case -->
+        <div class="news-box delhi-dogs">
+            <div class="news-overlay">
+                <h3>Delhi Stray Dogs Case</h3>
+                <p>Stray dogs in Delhi faced mistreatment, raising debates on urban safety & animal rights.</p>
+                <a href="https://www.thehindu.com/news/national/supreme-court-verdict-on-stray-dogs-live-updates-august-22-2025/article69963272.ece" target="_blank">Read Full Story ➝</a>
+            </div>
+        </div>
+
+        <!-- 2. Rescue Success -->
+        <div class="news-box rescued-tiger">
+            <div class="news-overlay">
+                <h3>Injured Tiger Rescued in Assam</h3>
+                <p>Forest officials successfully rescued & treated a tiger injured near Kaziranga.</p>
+                <a href="https://www.hindustantimes.com/india-news/forest-officials-rescue-tigress-which-strayed-out-of-flood-hit-kaziranga-national-park/story-V916zwZcaraQFihbwWlf8J.html?utm_source=chatgpt.com" target="_blank">Read Full Story ➝</a>
+            </div>
+        </div>
+
+        <!-- 3. Happy Story -->
+        <div class="news-box elephant-birthday">
+            <div class="news-overlay">
+                <h3>Chinna Thambi: The Elephant Villagers Love</h3>
+                <p>Chinna Thambi, a wild elephant, has made the forest fringe its home, leading villagers to adapt their lifestyles to coexist with him.</p>
+                <a href="https://timesofindia.indiatimes.com/city/chennai/chinna-thambi-an-elephant-villagers-both-love-and-fear/articleshow/67667983.cms" target="_blank">Read Full Story ➝</a>
+            </div>
+        </div>
+
+        <!-- 4. Bird Story -->
+        <div class="news-box flamingos-mumbai">
+            <div class="news-overlay">
+                <h3>Flamingos in Mumbai</h3>
+                <p>Thousands of pink flamingos painted the Mumbai wetlands, creating a breathtaking scene. 🦩</p>
+                <a href="https://www.hindustantimes.com/trending/thousands-of-flamingos-paint-navi-mumbai-pink-in-breathtaking-spectacle-watch-101741156654738.html" target="_blank">Read Full Story ➝</a>
+            </div>
+        </div>
+
+        <!-- 5. Emotional Story -->
+        <div class="news-box dog-adoption">
+            <div class="news-overlay">
+                <h3>Abandoned Dog Finds Home</h3>
+                <p>A stray dog left in Pune railway station was adopted by a kind family.</p>
+                <a href="https://timesofindia.indiatimes.com/city/pune/stray-dogs-on-pune-railway-platforms-passenger-safety-concerns/articleshow/108571431.cms" target="_blank">Read Full Story ➝</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<script src="{% static 'js/carousel.js' %}"></script>
+<script src="{% static 'js/rescue_popup.js' %}"></script>
+{% endblock %}

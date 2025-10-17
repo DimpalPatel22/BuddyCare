@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <!--navigation bar-->
+        <nav class="navbar">
+            <div class="logo">
+                <img src="{% static 'images/bcarelogo.webp' %}">
+            </div>
+            <ul class="links" style="list-style:none; display: flex;justify-content: space-evenly;">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{%url 'rescue_page' %}">Rescue</a></li>
+                <li><a href="{%url 'adopt_page' %}">Adopt</a></li>
+                <li><a href="{%url 'donate' %}">Donate</a></li>
+                <li><a href="{%url 'volunteer' %}">Volunteer/join</a></li>
+                <li><a href="{%url 'stories' %}">Stories</a></li>
+                <li><a href="">Community</a></li>
+                <li><a href="">Shop/Product</a></li>
+                <li class="dropdown">
+                    <a href="{% url 'learn' %}">Help/Learn ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{%url 'emergency' %}">Emergency Help</a></li>
+                        <li><a href="{%url 'food' %}">Nutrition & Food</a></li>
+                        <li><a href="{%url 'newowner' %}">First-Time Pet Owner Guidance</a></li>
+                        <li><a href="{%url 'health' %}">Disease & Health Awareness</a></li>
+                        <li><a href="{%url 'dangerous' %}">Dangerous Animal Help</a></li>
+                        <li><a href="">Educational Media & Resources</a></li>
+                    </ul>
+                </li>
+
+                {% if user.is_authenticated %}
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+                {% else %}
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'signup' %}">Signup</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+        <!-- Navbar message as sliding ticker -->
+         {% if messages %}
+         <div class="nav-marquee">
+            <div class="marquee-content">
+                {% for message in messages %}
+                <span class="{{ message.tags }}">{{ message }}</span>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+    </header>
+
+    <div class="main-content">
+        {% block mycontent %}
+        {% endblock %}
+    </div>
+
+    <footer class="fotter">
+
+        <div class="about"> <!--logo+description-->
+            <a href=""><img src="{% static 'images/pawfeather.jpg' %}"></a>
+            <p style="font-size: 14px; line-height: 1.5;">
+                BuddyCare- Dedicated to saving paws, wings,<br>
+                and hearts since 2025. Join us in making 
+                the world a better place for animals and birds.
+            </p>
+        </div>
+
+        <div class="footerlinks"> <!--quicklinks-->
+            <h4>Quick links</h4>
+            <ul style=" list-style: none; padding: 0;">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{%url 'rescue_page' %}">Rescue</a></li>
+                <li><a href="{%url 'adopt_page' %}">Adopt</a></li>
+                <li><a href="{%url 'donate' %}">Donate</a></li>
+                <li><a href="{%url 'volunteer' %}">Volunteer/join</a></li>
+                <li><a href="{%url 'learn' %}">Help/Learn</a></li>
+        </div>
+
+        <div class="contactinfo"> <!--contact insormation-->
+            <h4>Contact Us</h4>
+            <p>Email: help@buddycare.org</p>
+            <p>Contact number: +91 8850619612</p>
+            <div class="socialicones">
+                <a href=""><img src="{% static 'images/ilogo.jpg' %}">Instagram</a>
+                <a href=""><img src="{% static 'images/flogo.jpg' %}">Facebook</a>
+                <a href=""><img src="{% static 'images/tlogo.jpg' %}">Twitter</a>
+                <a href=""><img src="{% static 'images/wlogo.jpg' %}">Whatsapp</a>
+            </div>
+        </div>
+
+        <div class="bottom">
+            <p>© 2025 BuddyCare | All Rights Reserved</p>
+        </div>
+    </footer>
+
+<script src="{% static 'js/validate.js' %}"></script>
+<script src="{% static 'js/loginmessage.js' %}"></script>
+</body>
+</html>
